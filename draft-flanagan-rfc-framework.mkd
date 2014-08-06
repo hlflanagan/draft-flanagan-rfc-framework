@@ -1,0 +1,206 @@
+---
+title: RFC Format Framework
+abbrev: RFC Format Framework
+docname: draft-flanagan-rfc-framework
+date: 2014-08-04
+category: info
+ipr: trust200902
+pi:
+  toc: yes
+
+author:
+ -
+    ins: H. Flanagan
+    name: Heather Flanagan
+    organization: RFC Editor
+    email: rse@rfc-editor.org
+
+normative:
+  RFC6949:
+  draft-reschke-xml2rfc:
+    title: "The 'XML2RFC' version 2 Vocabulary"
+    author:
+        ins: J. Reschke
+        name: Julian Reschke
+    date: 2014
+    seriesinfo:
+      
+  draft-hoffman-xml2rfc:
+    title: "The 'XML2RFC' version 3 Vocabulary"
+    author:
+        ins: P. Hoffman
+        name: Paul Hoffman
+    date: 2014
+    seriesinfo:
+  draft-brownlee-svg-rfc:
+    title: "SVG Drawings for RFCs: SVG 1.2 RFC"
+    author:
+        ins: N. Brownlee
+        name: Nevil Brownlee
+    date: 2014
+    seriesinfo:
+  draft-hildebrand-html-rfc:
+    title: "HyperText Markup Language Request For Comments Format"
+    author:
+      -
+        ins: J. Hildebrand
+        name: Joe Hildebrand
+      -
+        ins: H. Flanagan, ed.
+        name: Heather Flanagan
+    date: 2014
+    seriesinfo:
+  draft-hansen-rfc-use-of-pdf:
+    title: "PDF for an RFC Series Output Document Format"
+    author:
+      -
+        ins: T. Hansen
+        name: Tony Hansen
+      -
+        ins: L. Masinter
+        name: Larry Masinter
+      -
+        ins: M. Hardy
+        name: Matthew Hardy
+    date: 2014
+    seriesinfo:
+  draft-flanagan-plaintext:
+    title: "Requirements for Plain Text RFCs"
+    author:
+        ins: H. Flanagan
+        name: Heather Flanagan
+    date: 2014
+    seriesinfo:
+  draft-flanagan-nonascii:
+    title: "The Use of Non-ASCII Characters in RFCs"
+    author:
+        ins: H. Flanagan
+        name: Heather Flanagan
+    date: 2014
+    seriesinfo:
+  
+
+informative:
+  draft-iab-styleguide:
+  XML-ANNOUNCE:
+
+--- abstract
+The canonical format for the RFC Series has been ASCII for several decades.  After extensive community discussion and debate, the RFC Editor will be transitioning to XML as the canonical format, with different publication formats rendered from that base document.  These changes are intended to increase the usability of the RFC Series by offering documents that match the needs of a wide variety of stakeholders.  With these changes, however, comes a significant increase in complexity.  This document serves as the framework that describes the problems being solved and summarizes the many documents created that capture the specific requirements for each aspect of the change in format.
+
+Discussion of this draft takes place on the rfc-interest mailing list (rfc-interest@rfc-editor.org), which has its home page at https://www.rfc-editor.org/mailman/listinfo/rfc-interest.
+
+--- middle
+
+# Introduction
+
+In RFC 6949, "RFC Series Format Requirements and Future Development," the need for additional features within RFCs such as non-ASCII characters to respect author names, more advanced artwork than ASCII art, and documents that could display properly on a wide variety of devices was discussed [RFC6949].  Based on the discussions with the IETF community as well as other communities of interest, the decision was made by the RFC Series Editor to explore a change to the format of the Series [XML-ANNOUNCE].  This document serves as the framework that describes the problems being solved and summarizes the documents created to-date that capture the specific requirements for each aspect of the change in format.  
+
+Key changes that have, based on feedback on the rfc-interest mailing list as well as meetings with the community, been of the greatest interest are highlighted, and a description of the transition plan that will take the Series from ASCII only to the new formats are also described.
+
+# Problem Statement
+
+When the first RFCs were published 45 years ago, the tools to create and read RFCs were limited.  The need for any characters outside the ASCII range did not start until several years and over a thousand documents into the Series [need to verify; first one I can find was RFC 1456 and distribution was limited to individuals who had access to the burgeoning Internet.
+
+Today, there are nearly three billion people connected to the Internet \[add reference -- http://www.internetlivestats.com/internet-users/\] and individuals from over ## countries regularly attending IETF meetings [ask Ray if I can add stats to the appendix or point to a web page somewhere].  The world has changed from when the first RFCs were published, but the Series remains critical to defining protocols, standards, best practices, and more for a global network that continues to grow.  In order to make RFCs easily read to the largest number of people possible, regardless of device, and to respect the diversity of authors and reference materials, it is time to change from the tightly prescribed format of the RFC Series.
+
+Of course, the requirements for the RFC Series must take into account communities beyond existing authors and readers.  Implementors outside of the IETF, lawyers that argue Intellectual Property Rights (IPR), and even policy-makers that need to know what to list in potential RFPs for their organizations, all have preferences and requirements for their specific needs, in addition to the particular preferences and requirements of RFC authors.
+
+
+# Terminology
+RFC 2119 keywords are not used in this document.
+
+Summary from RFC 6949:
+
+ASCII: Coded Character Set -- 7-bit American Standard Code for Information Interchange, ANSI X3.4-1986 [ASCII]
+
+Canonical format: the authorized, recognized, accepted, and archived version of the document
+
+Metadata: information associated with a document so as to provide, for example, definitions of its structure, or of elements within the document such as its topic or author
+
+Publication format: display and distribution format as it may be read or printed after the publication process has completed
+
+Reflowable text: text that automatically wraps to the next line in a document as the user moves the margins of the text, either by resizing the window or changing the font size
+
+Revisable format: the format that will provide the information for conversion into a Publication format; it is used or created by the RFC Editor (see Section 2.3 for an explanation of current practice)
+
+Submission format: the format submitted to the RFC Editor for editorial revision and publication
+
+# Overview of the Decision Making Process
+
+IETF meetings, BoFs then IAB sessions, rfc-interest, Design Team, research on other STM publishing houses, discussions with IETF Trust legal representation and informal chats with other SDOs.  Process reviewed regularly with the RSOC; regular updates provided to the IAB and IESG.
+
+point to BoF/Session slides and minutes
+* http://www.ietf.org/proceedings/84/rfcform.html
+* http://www.ietf.org/proceedings/85/rfcform.html
+* http://www.ietf.org/proceedings/88/rfcform.html
+* http://www.ietf.org/proceedings/89/rfcform.html
+* http://www.ietf.org/proceedings/90/rfcform.html
+
+# Key Changes
+
+# Document Summary
+
+## Canonical Format Documents
+
+### XML
+  draft-reschke-xml2rfc
+  draft-hoffman-xml2rfc
+
+
+## Publication Format Documents
+
+### HTML
+  draft-hildebrand-html-rfc
+
+
+### PDF
+  draft-hansen-rfc-use-of-pdf
+
+
+### Plain Text
+  draft-flanagan-plaintext
+
+
+### SVG
+  draft-brownlee-svg-rfc
+
+### Potential Future Publication Formats
+
+#### EPUB
+
+## Content and Page Layout
+
+### Non-ASCII Characters
+  draft-flanagan-nonascii
+
+### Document Formatting 
+(addendum to the Style Guide; hasn't been drafted yet)
+
+### Style Guide
+
+### CSS Requirements
+
+# Transition Plan
+
+## Testing Phase
+
+During document review and approved for submission phase, let authors and stream-approving body select drafts that are willing to help test the process, noting that final publication will remain in plain text.  In order to limit the amount of time the RPC spends on QA, noting that their priority is to edit and publish documents, community assistance will be necessary to help move this stage along.
+
+Purpose of testing phase: work with the community to identify and fix bugs in the process and the code, before producing canonical, immutable XML.  Also need to have more critical eyes on the publication formats.
+
+Criteria to indicate success: RPC and Tools Development team to review bugs and decide when all show-stoppers have been dealt with.
+
+## Transition Phase
+
+Documents submitted with an XML file will go through the new process to produce a canonical XML document and the available publication formats.  Documents submitted as plain text will be published as plain text only; they will not be converted to XML by the RPC.
+
+Purpose of transition phase: this is a time to introduce the process to the community at large.  Additional bugs will be found and fixed, and workflow refined.
+
+Criteria to indicate success:
+
+## Completion
+All drafts submitted for publication will be converted to XML and published as a Canonical XML file with available publication formats.
+
+Criteria to indicate success:
+
+# Acknowledgements
