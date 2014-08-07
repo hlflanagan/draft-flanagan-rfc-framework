@@ -1,4 +1,6 @@
 draft-flanagan-rfc-framework
 ============================
 
-Initial draft of the RFC Format Framework document
+Early draft of the RFC Format Framework document
+
+This is a working document and not to be considered in any way final until I say it is.
