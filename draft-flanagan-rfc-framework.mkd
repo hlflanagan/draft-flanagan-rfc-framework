@@ -1,8 +1,8 @@
 ---
 title: RFC Format Framework
 abbrev: RFC Format Framework
-docname: draft-flanagan-rfc-framework
-date: 2014-08-06
+docname: draft-flanagan-rfc-framework-00
+date: 2014-08-08
 category: info
 ipr: trust200902
 pi:
@@ -81,6 +81,8 @@ normative:
   
 
 informative:
+  RFC4845:
+  RFC6635:
   draft-iab-styleguide: 
     title: "The RFC Style Guide"
     author:
@@ -92,7 +94,57 @@ informative:
         name: Sandy Ginoza
     date: April 2014
     seriesinfo: draft-iab-styleguide-02
+  GEN-ART:
+    title: "General Area Review Team (Gen-ART)"
+    author:
+      org: IETF
+    target: http://www.ietf.org/iesg/directorate/gen-art.html
+  IETF84:
+    title: "IETF 84 Proceedings: RFC Format (rfcform)"
+    author:
+        ins: H. Flanagan
+        name: Heather Flanagan
+    target: http://www.ietf.org/proceedings/84/rfcform.html
+  IETF85:
+    title: "IETF 85 Proceedings: RFC Format (rfcform)"
+    author:
+        ins: H. Flanagan
+        name: Heather Flanagan
+    target: http://www.ietf.org/proceedings/85/rfcform.html
+  IETF88:
+    title: "IETF 88 Proceedings: RFC Format (rfcform)"
+    author:
+        ins: H. Flanagan
+        name: Heather Flanagan
+    target: http://www.ietf.org/proceedings/88/rfcform.html
+  IETF89:
+    title: "IETF 89 Proceedings: RFC Format (rfcform)"
+    author:
+        ins: H. Flanagan
+        name: Heather Flanagan
+    target: http://www.ietf.org/proceedings/89/rfcform.html
+  IETF90:
+    title: "IETF 90 Proceedings: RFC Format (rfcform)"
+    author:
+        ins: H. Flanagan
+        name: Heather Flanagan
+    target: http://www.ietf.org/proceedings/90/rfcform.html
+  ISTATS:
+    title: "Internet Live Stats"
+    target: http://www.internetlivestats.com/internet-users/
+  RFC-INTEREST:
+    title: "rfc-interest -- A list for discussion of the RFC series and RFC Editor functions."
+    author:
+      org: RFC Editor
+    target: https://www.rfc-editor.org/mailman/listinfo/rfc-interest
+  RSOC:
+    title: "RFC Editor Program: The RSOC"
+    author:
+      org: IAB
+    target: http://www.iab.org/activities/programs/rfc-editor-program/
   XML-ANNOUNCE:
+    title: "Subject: [rfc-i] Direction of the RFC Format Development effort"
+    target: http://www.rfc-editor.org/pipermail/rfc-interest/2013-May/005584.html
 
 --- abstract
 The canonical format for the RFC Series has been ASCII for several decades.  After extensive community discussion and debate, the RFC Editor will be transitioning to XML as the canonical format, with different publication formats rendered from that base document.  These changes are intended to increase the usability of the RFC Series by offering documents that match the needs of a wide variety of stakeholders.  With these changes, however, comes a significant increase in complexity.  This document serves as the framework that describes the problems being solved and summarizes the many documents created that capture the specific requirements for each aspect of the change in format.
@@ -103,15 +155,15 @@ Discussion of this draft takes place on the rfc-interest mailing list (rfc-inter
 
 # Introduction
 
-In RFC 6949, "RFC Series Format Requirements and Future Development," the need for additional features within RFCs such as non-ASCII characters to respect author names, more advanced artwork than ASCII art, and documents that could display properly on a wide variety of devices was discussed [RFC6949].  Based on the discussions with the IETF community as well as other communities of interest, the decision was made by the RFC Series Editor to explore a change to the format of the Series [XML-ANNOUNCE].  This document serves as the framework that describes the problems being solved and summarizes the documents created to-date that capture the specific requirements for each aspect of the change in format.  
+In RFC 6949, "RFC Series Format Requirements and Future Development," the need for additional features within RFCs such as non-ASCII characters to respect author names, more advanced artwork than ASCII art, and documents that could display properly on a wide variety of devices was discussed {{RFC6949}}.  Based on the discussions with the IETF community as well as other communities of interest, the decision was made by the RFC Series Editor to explore a change to the format of the Series {{XML-ANNOUNCE}}.  This document serves as the framework that describes the problems being solved and summarizes the documents created to-date that capture the specific requirements for each aspect of the change in format.  
 
-Key changes that have, based on feedback on the rfc-interest mailing list as well as meetings with the community, been of the greatest interest are highlighted, and a description of the transition plan that will take the Series from ASCII only to the new formats are also described.
+Key changes that have, based on feedback on the rfc-interest mailing list as well as meetings with the community, been of the greatest interest are highlighted, and a description of the transition plan that will take the Series from ASCII only to the new formats are also described {{RFC-INTEREST}}.
 
 # Problem Statement
 
 When the first RFCs were published 45 years ago, the tools to create and read RFCs were limited.  The need for any characters outside the ASCII range did not start until several years and over a thousand documents into the Series [need to verify; first one I can find was RFC 1456] and distribution was limited to individuals who had access to the burgeoning Internet.
 
-Today, there are nearly three billion people connected to the Internet \[add reference -- http://www.internetlivestats.com/internet-users/\] and individuals from over ## countries regularly attending IETF meetings [add stats to the appendix or point to a web page somewhere?].  The world has changed from when the first RFCs were published, but the Series remains critical to defining protocols, standards, best practices, and more for a global network that continues to grow.  In order to make RFCs easily read to the largest number of people possible, regardless of device, and to respect the diversity of authors and reference materials, it is time to change from the tightly prescribed format of the RFC Series.
+Today, there are nearly three billion people connected to the Internet and individuals from over ## countries regularly attending IETF meetings {{ISTATS}} [add stats to the appendix or point to a web page somewhere?].  The world has changed from when the first RFCs were published, but the Series remains critical to defining protocols, standards, best practices, and more for a global network that continues to grow.  In order to make RFCs easily read to the largest number of people possible, regardless of device, and to respect the diversity of authors and reference materials, it is time to change from the tightly prescribed format of the RFC Series.
 
 Of course, the requirements for the RFC Series must take into account communities beyond existing authors and readers.  Implementors outside of the IETF, lawyers that argue Intellectual Property Rights (IPR), and even policy-makers that need to know what to list in potential RFPs for their organizations, all have preferences and requirements for their specific needs, in addition to the particular preferences and requirements of RFC authors.
 
@@ -121,7 +173,7 @@ RFC 2119 keywords are not used in this document.
 
 Summary from RFC 6949:
 
-ASCII: Coded Character Set -- 7-bit American Standard Code for Information Interchange, ANSI X3.4-1986 [ASCII]
+ASCII: Coded Character Set -- 7-bit American Standard Code for Information Interchange, ANSI X3.4-1986
 
 Canonical format: the authorized, recognized, accepted, and archived version of the document
 
@@ -137,19 +189,22 @@ Submission format: the format submitted to the RFC Editor for editorial revision
 
 # Overview of the Decision Making Process
 
-IETF meetings, BoFs then IAB sessions, rfc-interest, Design Team, research on other STM publishing houses, discussions with IETF Trust legal representation and informal chats with other SDOs.  Process reviewed regularly with the RSOC; regular updates provided to the IAB and IESG.
+Community input was sought at ever stage of the process to determine what would work best for the community.  Updates were offered to the IETF community during the IETF Technical Plenary as well as Format BoFs or IAB sessions at IETF 84, IETF 85, IETF 88, IETF 89, and IETF 90 {{IETF84}} {{IETF85}} {{IETF88}} {{IETF89}} {{IETF90}}. 
 
-point to BoF/Session slides and minutes
+The rfc-interest mailing list serviced as the most direct community engagement mechanism throughout the project, and saw thousands of posts starting with whether change was necessary, what the use cases were for specific formats, details about possible implementations, and much more.
 
-* http://www.ietf.org/proceedings/84/rfcform.html
+RFC 6949 was published as an IAB stream document, and followed the process described in RFC 4845, "Process for Publication of IAB RFCs" {{RFC4845}}.  Several of the subsequent drafts produced by the RFC Format Design Team, including the XML v2 and v3 drafts and the SVG profile drafts, were sent through an early GenART review before starting the process to be accepted as an IAB stream draft {{GEN-ART}}. [If/when we get the Security Directorate review, add that here.]
 
-* http://www.ietf.org/proceedings/85/rfcform.html
+In order to reach a broader audience than usual and gain input from individuals actively involved in the publishing industry, informal discussions were held with participants at several International Association of Scientific, Technical, and Medical Publisher events.
 
-* http://www.ietf.org/proceedings/88/rfcform.html
+In order to respond to concerns regarding responses to subpoenas and to understand the requirements for lawyers, advice regarding the changes in format was sought direction from the IETF Trust legal team.
 
-* http://www.ietf.org/proceedings/89/rfcform.html
+Given that several other SDOs either do not or have not ever offered plain text, information input was sought from them as well regarding their experience with supporting multiple formats for their standards.
 
-* http://www.ietf.org/proceedings/90/rfcform.html
+Finally, the entire process was reviewed regularly with the RFC Series Oversight Committee and regular updates provided to the IAB and IESG {{RSOC}}.
+
+Where consensus was not reached during the process, the RSE made decisions, as per the guidance in RFC 6635, "RFC Editor Model (Version 2)" {{RFC6635}}.
+
 
 # Key Changes
 
@@ -198,27 +253,27 @@ XML:
 ## Canonical Format Documents
 
 ### XML
-  draft-reschke-xml2rfc - Describes the xml2rfc v2 vocabulary.  While in wide use today, this vocabulary had not been formally documented.  In order to understand what needed to change in the vocabulary to allow for a more simple experience and additional features for authors, the current vocabulary needed to be fully described.  This document will be almost immediately obsoleted by draft-hoffman-xml2rfc.
+  {{draft-reschke-xml2rfc}} - Describes the xml2rfc v2 vocabulary.  While in wide use today, this vocabulary had not been formally documented.  In order to understand what needed to change in the vocabulary to allow for a more simple experience and additional features for authors, the current vocabulary needed to be fully described.  This document will be almost immediately obsoleted by draft-hoffman-xml2rfc.
 
-  draft-hoffman-xml2rfc - Describes the xml2rfc v3 vocabulary.  The design goals in this vocabulary were to make the vocabulary more intuitive for authors, and to expand the features to support the changes being made in the publication process.
+  {{draft-hoffman-xml2rfc}} - Describes the xml2rfc v3 vocabulary.  The design goals in this vocabulary were to make the vocabulary more intuitive for authors, and to expand the features to support the changes being made in the publication process.
 
 
 ## Publication Format Documents
 
 ### HTML
-  draft-hildebrand-html-rfc - Describes the semantic HTML that will be produced by the RFC Editor from the xml2rfc v3 files.
+  {{draft-hildebrand-html-rfc}} - Describes the semantic HTML that will be produced by the RFC Editor from the xml2rfc v3 files.
 
 
 ### PDF
-  draft-hansen-rfc-use-of-pdf - Describes the tags and profiles that will be used to create the new PDF format.
+  {{draft-hansen-rfc-use-of-pdf}} - Describes the tags and profiles that will be used to create the new PDF format.
 
 
 ### Plain Text
-  draft-flanagan-plaintext - Describes the details of the plain text format, focusing in particular on what is changing from the existing plain text output.
+  {{draft-flanagan-plaintext}} - Describes the details of the plain text format, focusing in particular on what is changing from the existing plain text output.
 
 
 ### SVG
-  draft-brownlee-svg-rfc - describes the profile for SVG line art.  SVG is an XML-based vocabulary for creating line drawings; SVG information will be embedded within the canonical XML at time of publication.
+  {{draft-brownlee-svg-rfc}} - describes the profile for SVG line art.  SVG is an XML-based vocabulary for creating line drawings; SVG information will be embedded within the canonical XML at time of publication.
 
 ### Potential Future Publication Formats
 
@@ -227,7 +282,7 @@ XML:
 ## Content and Page Layout
 
 ### Non-ASCII Characters
-  draft-flanagan-nonascii - There are security and readability implications to moving outside the ASCII range of characters.  This draft focuses on exactly where and how non-ASCII characters may be used in an RFC, with an eye towards keeping the documents as secure and readable as possible given the information that needs to be expressed.
+  {{draft-flanagan-nonascii}} - There are security and readability implications to moving outside the ASCII range of characters.  This draft focuses on exactly where and how non-ASCII characters may be used in an RFC, with an eye towards keeping the documents as secure and readable as possible given the information that needs to be expressed.
 
 ### Document Formatting 
 (addendum to the Style Guide; hasn't been drafted yet)
@@ -237,7 +292,7 @@ XML:
 Not sure if this should be included in the framework draft.  It is something that must be documented as we make the RFC Series more complex, but it isn't really part of the format work directly.  To be discussed with the RFC Format Design Team
 
 ### Style Guide
-  draft-iab-styleguide - The RFC Style Guide was revised to remove as much page formatting information as possible, focusing instead on grammar, structure, and content of RFCs.
+  {{draft-iab-styleguide}} - The RFC Style Guide was revised to remove as much page formatting information as possible, focusing instead on grammar, structure, and content of RFCs.
 
 ### CSS Requirements
 
