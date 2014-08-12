@@ -2,7 +2,7 @@
 title: RFC Format Framework
 abbrev: RFC Format Framework
 docname: draft-flanagan-rfc-framework-00
-date: 2014-08-08
+date: 2014-08-12
 category: info
 ipr: trust200902
 pi:
@@ -142,6 +142,12 @@ informative:
     author:
       org: IAB
     target: http://www.iab.org/activities/programs/rfc-editor-program/
+  TNC2014:
+    title: "IETF Update - 'What's Hot?' - RFC Update"
+    author:
+      ins: H. Flanagan
+      name: Heather Flanagan
+    target: https://tnc2014.terena.org/core/presentation/84
   XML-ANNOUNCE:
     title: "Subject: [rfc-i] Direction of the RFC Format Development effort"
     target: http://www.rfc-editor.org/pipermail/rfc-interest/2013-May/005584.html
@@ -149,7 +155,7 @@ informative:
 --- abstract
 The canonical format for the RFC Series has been ASCII for several decades.  After extensive community discussion and debate, the RFC Editor will be transitioning to XML as the canonical format, with different publication formats rendered from that base document.  These changes are intended to increase the usability of the RFC Series by offering documents that match the needs of a wide variety of stakeholders.  With these changes, however, comes a significant increase in complexity.  This document serves as the framework that describes the problems being solved and summarizes the many documents created that capture the specific requirements for each aspect of the change in format.
 
-Discussion of this draft takes place on the rfc-interest mailing list (rfc-interest@rfc-editor.org), which has its home page at https://www.rfc-editor.org/mailman/listinfo/rfc-interest.
+Discussion of this draft takes place on the rfc-interest mailing list (rfc-interest@rfc-editor.org), which has its home page at <https://www.rfc-editor.org/mailman/listinfo/rfc-interest>.
 
 --- middle
 
@@ -171,7 +177,7 @@ Of course, the requirements for the RFC Series must take into account communitie
 # Terminology
 RFC 2119 keywords are not used in this document.
 
-Summary from RFC 6949:
+Terminology as described in RFC 6949:
 
 ASCII: Coded Character Set -- 7-bit American Standard Code for Information Interchange, ANSI X3.4-1986
 
@@ -189,17 +195,17 @@ Submission format: the format submitted to the RFC Editor for editorial revision
 
 # Overview of the Decision Making Process
 
-Community input was sought at ever stage of the process to determine what would work best for the community.  Updates were offered to the IETF community during the IETF Technical Plenary as well as Format BoFs or IAB sessions at IETF 84, IETF 85, IETF 88, IETF 89, and IETF 90 {{IETF84}} {{IETF85}} {{IETF88}} {{IETF89}} {{IETF90}}. 
+Requirements, use cases, concerns, and suggestions were collected from the communities of interest at every stage of the RFC format change project.  Input was received through the rfc-interest mailing list, as well as face-to-face sessions at IETF meetings.  Updates regarding the status of the project were offered to the IETF community during the IETF Technical Plenary as well as Format BoFs or IAB sessions at IETF 84, IETF 85, IETF 88, IETF 89, and IETF 90 {{IETF84}} {{IETF85}} {{IETF88}} {{IETF89}} {{IETF90}}. 
 
-The rfc-interest mailing list serviced as the most direct community engagement mechanism throughout the project, and saw thousands of posts starting with whether change was necessary, what the use cases were for specific formats, details about possible implementations, and much more.
+The first document published, RFC 6949, provided the first solid documentation on what the requirements were for the Series and in effect was the output from the first year of discussion on the topic of RFC format.  That RFC was published as an IAB stream document, thus following the process described in RFC 4845, "Process for Publication of IAB RFCs" {{RFC4845}}.  
 
-RFC 6949 was published as an IAB stream document, and followed the process described in RFC 4845, "Process for Publication of IAB RFCs" {{RFC4845}}.  Several of the subsequent drafts produced by the RFC Format Design Team, including the XML v2 and v3 drafts and the SVG profile drafts, were sent through an early GenART review before starting the process to be accepted as an IAB stream draft {{GEN-ART}}. [If/when we get the Security Directorate review, add that here.]
+After the high level requirements were published, a Design Team was brought together to start working out the necessary details to inform the development of code to support new and changed formats.  While the bi-weekly calls for this team were closed, review of the drafts produced by this team were done publicly, both through requests for input on the rfc-interest mailing list, as well as requests for early GenART reviews.  Several of the subsequent drafts produced by the RFC Format Design Team, including the XML v2 and v3 drafts and the SVG profile drafts, were sent through an early GenART review before starting the process to be accepted as an IAB stream draft {{GEN-ART}}. [If/when we get the Security Directorate review, add that here.]
 
-In order to reach a broader audience than usual and gain input from individuals actively involved in the publishing industry, informal discussions were held with participants at several International Association of Scientific, Technical, and Medical Publisher events.
+While the IETF community provided the majority of input on the process, additional outreach opportunities were sought to gain input from an even broader audience.  Informal discussions were held with participants at several International Association of Scientific, Technical, and Medical Publisher events, and presentations made at technical conferences such as the TERENA Networking Conference 2014 and NORDUnet 2014 {{TNC2014}} [NORDUnet link TBD].
 
-In order to respond to concerns regarding responses to subpoenas and to understand the requirements for lawyers, advice regarding the changes in format was sought direction from the IETF Trust legal team.
+In order to respond to concerns regarding responses to subpoenas and to understand the requirements for lawyers, advice regarding the changes in format was sought direction from the IETF Trust legal team [note: work in progress].
 
-Given that several other SDOs either do not or have not ever offered plain text, information input was sought from them as well regarding their experience with supporting multiple formats for their standards.
+Given that several other SDOs either do not or have not ever offered plain text, informal input was sought from them as well regarding their experience with supporting multiple formats for their standards.
 
 Finally, the entire process was reviewed regularly with the RFC Series Oversight Committee and regular updates provided to the IAB and IESG {{RSOC}}.
 
@@ -289,7 +295,7 @@ XML:
 
 ### Digital Preservation Policy
 
-Not sure if this should be included in the framework draft.  It is something that must be documented as we make the RFC Series more complex, but it isn't really part of the format work directly.  To be discussed with the RFC Format Design Team
+[HF: This is about the long-term, formal archival process for RFCs.  Not sure if a pointer to this should be included in the framework draft.  It is something that must be documented as we make the RFC Series more complex, but it isn't really part of the format work directly.]
 
 ### Style Guide
   {{draft-iab-styleguide}} - The RFC Style Guide was revised to remove as much page formatting information as possible, focusing instead on grammar, structure, and content of RFCs.
@@ -300,9 +306,11 @@ Not sure if this should be included in the framework draft.  It is something tha
 
 ## Testing Phase
 
-During document review and approved for submission phase, let authors and stream-approving body select drafts that are willing to help test the process, noting that final publication will remain in plain text.  In order to limit the amount of time the RPC spends on QA, noting that their priority is to edit and publish documents, community assistance will be necessary to help move this stage along.
+During document review and approved for submission phase, authors and stream-approving body will select drafts to run through the new process, noting that final publication will continue to be in plain text only.  In order to limit the amount of time the RFC Production Center (RPC) spends on testing and QA, note that their priority is to edit and publish documents, community assistance will be necessary to help move this stage along.
 
 Purpose of testing phase: work with the community to identify and fix bugs in the process and the code, before producing canonical, immutable XML.  Also need to have more critical eyes on the publication formats.
+
+Known risks: 
 
 Criteria to indicate success: RPC and Tools Development team to review bugs and decide when all show-stoppers have been dealt with.
 
@@ -312,16 +320,24 @@ Documents submitted with an XML file will go through the new process to produce 
 
 Purpose of transition phase: this is a time to introduce the process to the community at large.  Additional bugs will be found and fixed, and workflow refined.
 
-Known risks: More work on the part of the RFC Production Center to essentially support both old and new publication processes.  Confusion in the future as authors find some documents published at this time with a full set of outputs, while other documents only have plain text.  Delay in publication as new bugs are found that must be fixed before the files can be converted into the canonical format and associated publication formats.
+Known risks: More work on the part of the RPC to support both old and new publication processes for some unknown period of time.  There is potential for confusion as consumers of RFCs find some documents published at this time with a full set of outputs, while other documents only have plain text.  There may be a delay in publication as new bugs are found that must be fixed before the files can be converted into the canonical format and associated publication formats.
 
 Criteria to indicate success: All major and critical bugs are resolved.  Rough consensus from the community regarding the utility of the new formats.
 
 ## Completion 
 All drafts submitted for publication, including text, will be converted to XML and published as a Canonical XML file with available publication formats.
 
-Known risks: Higher work load for the RPC as create and/or encourage best practice with the XML structure.
+Known risks: Higher work load for the RPC as, in addition to the grammar and style editing, they also create and/or encourage best practice with the XML structure.
 
 Criteria to indicate success: Costs and resources stabilize for the new process.
 
+# IANA Considerations
+
+This document has no actions for IANA.
+
+# Security Considerations
+
+n/a?
+
 # Acknowledgements
-RFC Format Design team, ftw!
+With many thanks to the RFC Format Design Team for their efforts in making this transition successful: Nevil Brownlee (ISE), Tony Hansen, Joe Hildebrand, Paul Hoffman, Ted Lemon, Julian Reschke, Adam Roach, Alice Russo, Robert Sparks (Tools Team liaison), and Dave Thaler 
