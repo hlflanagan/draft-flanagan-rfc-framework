@@ -4,8 +4,8 @@
 
 Network Working Group                                        H. Flanagan
 Internet-Draft                                                RFC Editor
-Intended status: Informational                           August 12, 2014
-Expires: February 13, 2015
+Intended status: Informational                           August 13, 2014
+Expires: February 14, 2015
 
 
                           RFC Format Framework
@@ -27,7 +27,7 @@ Abstract
 
    Discussion of this draft takes place on the rfc-interest mailing list
    (rfc-interest@rfc-editor.org), which has its home page at https://www
-   .rfc-editor.org/mailman/listinfo/rfc-interest [1].
+   .rfc-editor.org/mailman/listinfo/rfc-interest.
 
 Status of This Memo
 
@@ -44,7 +44,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on February 13, 2015.
+   This Internet-Draft will expire on February 14, 2015.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Flanagan                Expires February 13, 2015               [Page 1]
+Flanagan                Expires February 14, 2015               [Page 1]
 
 Internet-Draft            RFC Format Framework               August 2014
 
@@ -72,35 +72,35 @@ Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
    2.  Problem Statement . . . . . . . . . . . . . . . . . . . . . .   3
-   3.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   3
+   3.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   4
    4.  Overview of the Decision Making Process . . . . . . . . . . .   4
-   5.  Key Changes . . . . . . . . . . . . . . . . . . . . . . . . .   5
-   6.  Document Summary  . . . . . . . . . . . . . . . . . . . . . .   6
-     6.1.  Canonical Format Documents  . . . . . . . . . . . . . . .   6
-       6.1.1.  XML . . . . . . . . . . . . . . . . . . . . . . . . .   6
+   5.  Key Changes . . . . . . . . . . . . . . . . . . . . . . . . .   6
+   6.  Document Summary  . . . . . . . . . . . . . . . . . . . . . .   7
+     6.1.  Canonical Format Documents  . . . . . . . . . . . . . . .   7
+       6.1.1.  XML . . . . . . . . . . . . . . . . . . . . . . . . .   7
      6.2.  Publication Format Documents  . . . . . . . . . . . . . .   7
        6.2.1.  HTML  . . . . . . . . . . . . . . . . . . . . . . . .   7
        6.2.2.  PDF . . . . . . . . . . . . . . . . . . . . . . . . .   7
        6.2.3.  Plain Text  . . . . . . . . . . . . . . . . . . . . .   7
-       6.2.4.  SVG . . . . . . . . . . . . . . . . . . . . . . . . .   7
-       6.2.5.  Potential Future Publication Formats  . . . . . . . .   7
-     6.3.  Content and Page Layout . . . . . . . . . . . . . . . . .   7
-       6.3.1.  Non-ASCII Characters  . . . . . . . . . . . . . . . .   7
+       6.2.4.  SVG . . . . . . . . . . . . . . . . . . . . . . . . .   8
+       6.2.5.  Potential Future Publication Formats  . . . . . . . .   8
+     6.3.  Content and Page Layout . . . . . . . . . . . . . . . . .   8
+       6.3.1.  Non-ASCII Characters  . . . . . . . . . . . . . . . .   8
        6.3.2.  Document Formatting . . . . . . . . . . . . . . . . .   8
        6.3.3.  Digital Preservation Policy . . . . . . . . . . . . .   8
        6.3.4.  Style Guide . . . . . . . . . . . . . . . . . . . . .   8
        6.3.5.  CSS Requirements  . . . . . . . . . . . . . . . . . .   8
-   7.  Transition Plan . . . . . . . . . . . . . . . . . . . . . . .   8
-     7.1.  Testing Phase . . . . . . . . . . . . . . . . . . . . . .   8
-     7.2.  Transition Phase  . . . . . . . . . . . . . . . . . . . .   8
+   7.  Transition Plan . . . . . . . . . . . . . . . . . . . . . . .   9
+     7.1.  Testing Phase . . . . . . . . . . . . . . . . . . . . . .   9
+     7.2.  Transition Phase  . . . . . . . . . . . . . . . . . . . .   9
      7.3.  Completion  . . . . . . . . . . . . . . . . . . . . . . .   9
-   8.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   9
-   9.  Security Considerations . . . . . . . . . . . . . . . . . . .   9
+   8.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  10
+   9.  Security Considerations . . . . . . . . . . . . . . . . . . .  10
    10. Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  10
    11. References  . . . . . . . . . . . . . . . . . . . . . . . . .  10
      11.1.  Normative References . . . . . . . . . . . . . . . . . .  10
-     11.2.  Informative References . . . . . . . . . . . . . . . . .  10
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  11
+     11.2.  Informative References . . . . . . . . . . . . . . . . .  11
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  12
 
 1.  Introduction
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Flanagan                Expires February 13, 2015               [Page 2]
+Flanagan                Expires February 14, 2015               [Page 2]
 
 Internet-Draft            RFC Format Framework               August 2014
 
@@ -130,6 +130,13 @@ Internet-Draft            RFC Format Framework               August 2014
    that will take the Series from ASCII only to the new formats are also
    described [RFC-INTEREST].
 
+   This document is concerned with the production of RFCs, focusing on
+   the published formats.  It does not address any changes to the
+   processes each stream uses to develop and review their submissions
+   (specifically, how Internet-Drafts will be developed).  While I-Ds
+   have a similar set of issues and concerns, directly addressing those
+   issues for I-Ds will be discussed within each document stream.
+
 2.  Problem Statement
 
    When the first RFCs were published 45 years ago, the tools to create
@@ -140,19 +147,29 @@ Internet-Draft            RFC Format Framework               August 2014
    to the burgeoning Internet.
 
    Today, there are nearly three billion people connected to the
-   Internet and individuals from over ## countries regularly attending
-   IETF meetings [ISTATS] [add stats to the appendix or point to a web
-   page somewhere?].  The world has changed from when the first RFCs
-   were published, but the Series remains critical to defining
-   protocols, standards, best practices, and more for a global network
-   that continues to grow.  In order to make RFCs easily read to the
-   largest number of people possible, regardless of device, and to
-   respect the diversity of authors and reference materials, it is time
-   to change from the tightly prescribed format of the RFC Series.
+   Internet, and individuals from 45 countries or more regularly
+   attending IETF meetings over the last 5 years [ISTATS] [IETF numbers
+   are unpublished figures from the Secretariat; one could dig them out
+   from the plenary proceedings-how to reference?].  The Internet is
+   global, and while the world has changed from when the first RFCs were
+   published, the Series remains critical to defining protocols,
+   standards, best practices, and more for this global network that
+   continues to grow.  In order to make RFCs easily read to the largest
+   number of people possible, regardless of device, and to respect the
+   diversity of authors and reference materials, it is time to change
+   from the tightly prescribed format of the RFC Series.
 
    Of course, the requirements for the RFC Series must take into account
    communities beyond existing authors and readers.  Implementors
    outside of the IETF, lawyers that argue Intellectual Property Rights
+
+
+
+Flanagan                Expires February 14, 2015               [Page 3]
+
+Internet-Draft            RFC Format Framework               August 2014
+
+
    (IPR), and even policy-makers that need to know what to list in
    potential RFPs for their organizations, all have preferences and
    requirements for their specific needs, in addition to the particular
@@ -161,14 +178,6 @@ Internet-Draft            RFC Format Framework               August 2014
 3.  Terminology
 
    RFC 2119 keywords are not used in this document.
-
-
-
-
-Flanagan                Expires February 13, 2015               [Page 3]
-
-Internet-Draft            RFC Format Framework               August 2014
-
 
    Terminology as described in RFC 6949:
 
@@ -209,6 +218,14 @@ Internet-Draft            RFC Format Framework               August 2014
 
    The first document published, RFC 6949, provided the first solid
    documentation on what the requirements were for the Series and in
+
+
+
+Flanagan                Expires February 14, 2015               [Page 4]
+
+Internet-Draft            RFC Format Framework               August 2014
+
+
    effect was the output from the first year of discussion on the topic
    of RFC format.  That RFC was published as an IAB stream document,
    thus following the process described in RFC 4845, "Process for
@@ -218,14 +235,6 @@ Internet-Draft            RFC Format Framework               August 2014
    brought together to start working out the necessary details to inform
    the development of code to support new and changed formats.  While
    the bi-weekly calls for this team were closed, review of the drafts
-
-
-
-Flanagan                Expires February 13, 2015               [Page 4]
-
-Internet-Draft            RFC Format Framework               August 2014
-
-
    produced by this team were done publicly, both through requests for
    input on the rfc-interest mailing list, as well as requests for early
    GenART reviews.  Several of the subsequent drafts produced by the RFC
@@ -260,6 +269,19 @@ Internet-Draft            RFC Format Framework               August 2014
    decisions, as per the guidance in RFC 6635, "RFC Editor Model
    (Version 2)" [RFC6635].
 
+
+
+
+
+
+
+
+
+Flanagan                Expires February 14, 2015               [Page 5]
+
+Internet-Draft            RFC Format Framework               August 2014
+
+
 5.  Key Changes
 
    At the highest level, the changes being made to the RFC Format
@@ -275,13 +297,6 @@ Internet-Draft            RFC Format Framework               August 2014
    For more detail, please see the sections later in this document and
    review the drafts.
 
-
-
-Flanagan                Expires February 13, 2015               [Page 5]
-
-Internet-Draft            RFC Format Framework               August 2014
-
-
    Plain text:
 
    o  no longer the canonical version
@@ -291,6 +306,9 @@ Internet-Draft            RFC Format Framework               August 2014
    o  BOMs will be added at the start of each file
 
    o  widow and orphan control will not have priority
+
+   o  authors may choose to have pointers to line art in other
+      publication formats in place of ASCII art in the .txt file
 
    PDF:
 
@@ -302,14 +320,23 @@ Internet-Draft            RFC Format Framework               August 2014
 
    o  line art, if available, will be included
 
+   o  may contain the source XML [tbd]
+
    HTML:
 
-   o  a new format for the RFC Editor; this will not be the same as the
-      tools.ietf.org generated HTML files
+   o  no longer derived from the plain text document
 
    o  semantic HTML + override-able CSS
 
    o  line art, if available, will be included
+
+
+
+
+Flanagan                Expires February 14, 2015               [Page 6]
+
+Internet-Draft            RFC Format Framework               August 2014
+
 
    o  text will be reflowable
 
@@ -330,14 +357,6 @@ Internet-Draft            RFC Format Framework               August 2014
 
    [draft-reschke-xml2rfc] - Describes the xml2rfc v2 vocabulary.  While
    in wide use today, this vocabulary had not been formally documented.
-
-
-
-Flanagan                Expires February 13, 2015               [Page 6]
-
-Internet-Draft            RFC Format Framework               August 2014
-
-
    In order to understand what needed to change in the vocabulary to
    allow for a more simple experience and additional features for
    authors, the current vocabulary needed to be fully described.  This
@@ -347,7 +366,8 @@ Internet-Draft            RFC Format Framework               August 2014
    [draft-hoffman-xml2rfc] - Describes the xml2rfc v3 vocabulary.  The
    design goals in this vocabulary were to make the vocabulary more
    intuitive for authors, and to expand the features to support the
-   changes being made in the publication process.
+   changes being made in the publication process.  This draft will
+   obsolete draft-reschke-xml2rfc as soon as this draft is published.
 
 6.2.  Publication Format Documents
 
@@ -359,9 +379,20 @@ Internet-Draft            RFC Format Framework               August 2014
 6.2.2.  PDF
 
    [draft-hansen-rfc-use-of-pdf] - Describes the tags and profiles that
-   will be used to create the new PDF format.
+   will be used to create the new PDF format, including both the
+   internal structure and the visible layout of the file.  A review of
+   the different versions of PDF is offered, with a recommendation of
+   what PDF standard should apply to RFCs.
 
 6.2.3.  Plain Text
+
+
+
+
+Flanagan                Expires February 14, 2015               [Page 7]
+
+Internet-Draft            RFC Format Framework               August 2014
+
 
    [draft-flanagan-plaintext] - Describes the details of the plain text
    format, focusing in particular on what is changing from the existing
@@ -386,14 +417,6 @@ Internet-Draft            RFC Format Framework               August 2014
    implications to moving outside the ASCII range of characters.  This
    draft focuses on exactly where and how non-ASCII characters may be
    used in an RFC, with an eye towards keeping the documents as secure
-
-
-
-Flanagan                Expires February 13, 2015               [Page 7]
-
-Internet-Draft            RFC Format Framework               August 2014
-
-
    and readable as possible given the information that needs to be
    expressed.
 
@@ -413,9 +436,19 @@ Internet-Draft            RFC Format Framework               August 2014
 
    [draft-iab-styleguide] - The RFC Style Guide was revised to remove as
    much page formatting information as possible, focusing instead on
-   grammar, structure, and content of RFCs.
+   grammar, structure, and content of RFCs.  Some of the changes
+   recommended, however, informed the XML v3 vocabulary.
 
 6.3.5.  CSS Requirements
+
+
+
+
+
+Flanagan                Expires February 14, 2015               [Page 8]
+
+Internet-Draft            RFC Format Framework               August 2014
+
 
 7.  Transition Plan
 
@@ -441,15 +474,6 @@ Internet-Draft            RFC Format Framework               August 2014
 
 7.2.  Transition Phase
 
-
-
-
-
-Flanagan                Expires February 13, 2015               [Page 8]
-
-Internet-Draft            RFC Format Framework               August 2014
-
-
    Documents submitted with an XML file will go through the new process
    to produce a canonical XML document and the available publication
    formats.  Documents submitted as plain text will be published as
@@ -474,6 +498,14 @@ Internet-Draft            RFC Format Framework               August 2014
 
 7.3.  Completion
 
+
+
+
+Flanagan                Expires February 14, 2015               [Page 9]
+
+Internet-Draft            RFC Format Framework               August 2014
+
+
    All drafts submitted for publication, including text, will be
    converted to XML and published as a Canonical XML file with available
    publication formats.
@@ -491,20 +523,12 @@ Internet-Draft            RFC Format Framework               August 2014
 
 9.  Security Considerations
 
-   n/a?
-
-
-
-
-
-
-
-
-
-Flanagan                Expires February 13, 2015               [Page 9]
-
-Internet-Draft            RFC Format Framework               August 2014
-
+   Changing the format for RFCs involves modifying a great number of
+   components to publication.  Understanding those changes and the
+   implications for the entire tool chain is critical so as to avoid
+   unintended bugs that would allow unintended changes to text.
+   Unintended changes to text could in turn corrupt a standard, practice
+   or critical piece of information about a protocol.
 
 10.  Acknowledgements
 
@@ -529,6 +553,15 @@ Internet-Draft            RFC Format Framework               August 2014
               hoffman-xml2rfc-09 , July 2014.
 
    [draft-brownlee-svg-rfc]
+
+
+
+
+Flanagan                Expires February 14, 2015              [Page 10]
+
+Internet-Draft            RFC Format Framework               August 2014
+
+
               Brownlee, N., "SVG Drawings for RFCs: SVG 1.2 RFC", draft-
               brownlee-svg-rfc-07 , July 2014.
 
@@ -555,13 +588,6 @@ Internet-Draft            RFC Format Framework               August 2014
    [RFC4845]  Daigle, L. and Internet Architecture Board, "Process for
               Publication of IAB RFCs", RFC 4845, July 2007.
 
-
-
-Flanagan                Expires February 13, 2015              [Page 10]
-
-Internet-Draft            RFC Format Framework               August 2014
-
-
    [RFC6635]  Kolkman, O., Halpern, J., and IAB, "RFC Editor Model
               (Version 2)", RFC 6635, June 2012.
 
@@ -583,6 +609,14 @@ Internet-Draft            RFC Format Framework               August 2014
 
    [IETF89]   Flanagan, H., "IETF 89 Proceedings: RFC Format (rfcform)",
               n.d., <http://www.ietf.org/proceedings/89/rfcform.html>.
+
+
+
+
+Flanagan                Expires February 14, 2015              [Page 11]
+
+Internet-Draft            RFC Format Framework               August 2014
+
 
    [IETF90]   Flanagan, H., "IETF 90 Proceedings: RFC Format (rfcform)",
               n.d., <http://www.ietf.org/proceedings/90/rfcform.html>.
@@ -607,16 +641,6 @@ Internet-Draft            RFC Format Framework               August 2014
               pipermail/rfc-interest/2013-May/005584.html>.
 
 Author's Address
-
-
-
-
-
-
-Flanagan                Expires February 13, 2015              [Page 11]
-
-Internet-Draft            RFC Format Framework               August 2014
-
 
    Heather Flanagan
    RFC Editor
@@ -645,29 +669,5 @@ Internet-Draft            RFC Format Framework               August 2014
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Flanagan                Expires February 13, 2015              [Page 12]
+Flanagan                Expires February 14, 2015              [Page 12]
 

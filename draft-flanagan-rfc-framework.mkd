@@ -2,7 +2,7 @@
 title: RFC Format Framework
 abbrev: RFC Format Framework
 docname: draft-flanagan-rfc-framework-00
-date: 2014-08-12
+date: 2014-08-13
 category: info
 ipr: trust200902
 pi:
@@ -155,7 +155,7 @@ informative:
 --- abstract
 The canonical format for the RFC Series has been ASCII for several decades.  After extensive community discussion and debate, the RFC Editor will be transitioning to XML as the canonical format, with different publication formats rendered from that base document.  These changes are intended to increase the usability of the RFC Series by offering documents that match the needs of a wide variety of stakeholders.  With these changes, however, comes a significant increase in complexity.  This document serves as the framework that describes the problems being solved and summarizes the many documents created that capture the specific requirements for each aspect of the change in format.
 
-Discussion of this draft takes place on the rfc-interest mailing list (rfc-interest@rfc-editor.org), which has its home page at <https://www.rfc-editor.org/mailman/listinfo/rfc-interest>.
+Discussion of this draft takes place on the rfc-interest mailing list (rfc-interest@rfc-editor.org), which has its home page at https://www.rfc-editor.org/mailman/listinfo/rfc-interest.
 
 --- middle
 
@@ -165,11 +165,13 @@ In RFC 6949, "RFC Series Format Requirements and Future Development," the need f
 
 Key changes that have, based on feedback on the rfc-interest mailing list as well as meetings with the community, been of the greatest interest are highlighted, and a description of the transition plan that will take the Series from ASCII only to the new formats are also described {{RFC-INTEREST}}.
 
+This document is concerned with the production of RFCs, focusing on the published formats. It does not address any changes to the processes each stream uses to develop and review their submissions (specifically, how Internet-Drafts will be developed).  While I-Ds have a similar set of issues and concerns, directly addressing those issues for I-Ds will be discussed within each document stream.
+
 # Problem Statement
 
 When the first RFCs were published 45 years ago, the tools to create and read RFCs were limited.  The need for any characters outside the ASCII range did not start until several years and over a thousand documents into the Series [need to verify; first one I can find was RFC 1456] and distribution was limited to individuals who had access to the burgeoning Internet.
 
-Today, there are nearly three billion people connected to the Internet and individuals from over ## countries regularly attending IETF meetings {{ISTATS}} [add stats to the appendix or point to a web page somewhere?].  The world has changed from when the first RFCs were published, but the Series remains critical to defining protocols, standards, best practices, and more for a global network that continues to grow.  In order to make RFCs easily read to the largest number of people possible, regardless of device, and to respect the diversity of authors and reference materials, it is time to change from the tightly prescribed format of the RFC Series.
+Today, there are nearly three billion people connected to the Internet, and individuals from 45 countries or more regularly attending IETF meetings over the last 5 years {{ISTATS}} [IETF numbers are unpublished figures from the Secretariat; one could dig them out from the plenary proceedings--how to reference?].  The Internet is global, and while the world has changed from when the first RFCs were published, the Series remains critical to defining protocols, standards, best practices, and more for this global network that continues to grow.  In order to make RFCs easily read to the largest number of people possible, regardless of device, and to respect the diversity of authors and reference materials, it is time to change from the tightly prescribed format of the RFC Series.
 
 Of course, the requirements for the RFC Series must take into account communities beyond existing authors and readers.  Implementors outside of the IETF, lawyers that argue Intellectual Property Rights (IPR), and even policy-makers that need to know what to list in potential RFPs for their organizations, all have preferences and requirements for their specific needs, in addition to the particular preferences and requirements of RFC authors.
 
@@ -220,39 +222,43 @@ A short summary of changes for each document format is listed below.  For more d
 
 Plain text:
 
-* no longer the canonical version
+  * no longer the canonical version
 
-* non-ASCII characters will be allowed in .txt files
+  * non-ASCII characters will be allowed in .txt files
 
-* BOMs will be added at the start of each file
+  * BOMs will be added at the start of each file
 
-* widow and orphan control will not have priority
+  * widow and orphan control will not have priority
+
+  * authors may choose to have pointers to line art in other publication formats in place of ASCII art in the .txt file
 
 PDF:
 
-* no longer derived from the plain text document
+  * no longer derived from the plain text document
 
-* will include a rich set of tags and metadata within the document
+  * will include a rich set of tags and metadata within the document
 
-* will conform to PDF/A-3
+  * will conform to PDF/A-3
 
-* line art, if available, will be included
+  * line art, if available, will be included
+
+  * may contain the source XML [tbd]
 
 HTML:
 
-* a new format for the RFC Editor; this will not be the same as the tools.ietf.org generated HTML files
+  * no longer derived from the plain text document
 
-* semantic HTML + override-able CSS 
+  * semantic HTML + override-able CSS 
 
-* line art, if available, will be included
+  * line art, if available, will be included
 
-* text will be reflowable
+  * text will be reflowable
 
 XML:
 
-* this will be the canonical version that contains all information necessary to render a variety of formats
+  * this will be the canonical version that contains all information necessary to render a variety of formats
 
-* the canonical XML vocabulary will be the v3 vocabulary; authors may submit drafts in v2 vocabulary, but the final publication will convert that to v3
+  * the canonical XML vocabulary will be the v3 vocabulary; authors may submit drafts in v2 vocabulary, but the final publication will convert that to v3
 
 # Document Summary
 
@@ -261,7 +267,7 @@ XML:
 ### XML
   {{draft-reschke-xml2rfc}} - Describes the xml2rfc v2 vocabulary.  While in wide use today, this vocabulary had not been formally documented.  In order to understand what needed to change in the vocabulary to allow for a more simple experience and additional features for authors, the current vocabulary needed to be fully described.  This document will be almost immediately obsoleted by draft-hoffman-xml2rfc.
 
-  {{draft-hoffman-xml2rfc}} - Describes the xml2rfc v3 vocabulary.  The design goals in this vocabulary were to make the vocabulary more intuitive for authors, and to expand the features to support the changes being made in the publication process.
+  {{draft-hoffman-xml2rfc}} - Describes the xml2rfc v3 vocabulary.  The design goals in this vocabulary were to make the vocabulary more intuitive for authors, and to expand the features to support the changes being made in the publication process.  This draft will obsolete draft-reschke-xml2rfc as soon as this draft is published.
 
 
 ## Publication Format Documents
@@ -271,7 +277,7 @@ XML:
 
 
 ### PDF
-  {{draft-hansen-rfc-use-of-pdf}} - Describes the tags and profiles that will be used to create the new PDF format.
+  {{draft-hansen-rfc-use-of-pdf}} - Describes the tags and profiles that will be used to create the new PDF format, including both the internal structure and the visible layout of the file.  A review of the different versions of PDF is offered, with a recommendation of what PDF standard should apply to RFCs.
 
 
 ### Plain Text
@@ -298,7 +304,7 @@ XML:
 [HF: This is about the long-term, formal archival process for RFCs.  Not sure if a pointer to this should be included in the framework draft.  It is something that must be documented as we make the RFC Series more complex, but it isn't really part of the format work directly.]
 
 ### Style Guide
-  {{draft-iab-styleguide}} - The RFC Style Guide was revised to remove as much page formatting information as possible, focusing instead on grammar, structure, and content of RFCs.
+  {{draft-iab-styleguide}} - The RFC Style Guide was revised to remove as much page formatting information as possible, focusing instead on grammar, structure, and content of RFCs.  Some of the changes recommended, however, informed the XML v3 vocabulary.
 
 ### CSS Requirements
 
@@ -337,7 +343,7 @@ This document has no actions for IANA.
 
 # Security Considerations
 
-n/a?
+Changing the format for RFCs involves modifying a great number of components to publication.  Understanding those changes and the implications for the entire tool chain is critical so as to avoid unintended bugs that would allow unintended changes to text.  Unintended changes to text could in turn corrupt a standard, practice or critical piece of information about a protocol.
 
 # Acknowledgements
 With many thanks to the RFC Format Design Team for their efforts in making this transition successful: Nevil Brownlee (ISE), Tony Hansen, Joe Hildebrand, Paul Hoffman, Ted Lemon, Julian Reschke, Adam Roach, Alice Russo, Robert Sparks (Tools Team liaison), and Dave Thaler 
