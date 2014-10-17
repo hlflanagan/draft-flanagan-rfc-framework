@@ -24,7 +24,7 @@
       </address>
     </author>
 
-    <date year="2014" month="October" day="13"/>
+    <date year="2014" month="October" day="17"/>
     
 
     <abstract>
@@ -229,15 +229,15 @@
 </section>
 <section anchor="testing-phase" title="Testing and Transition">
 
-<t>During the I-D review and approval process, authors and stream-approving bodies will select drafts to run through the proposed new publication process.  While the final RFCs published during this time will continue as plain-text, the feedback process is necessary to bootstrap initial testing.  These early tests will target finding issues with the proposed xml2rfc v3 vocabulary that result in poorly formed publication formats as well as issues that prevent proper review of submitted drafts.</t>
+<t>During the I-D review and approval process, authors and stream-approving bodies will select drafts to run through the proposed new publication process.  While the final RFCs published during this time will continue as plain-text and immutable once published, the feedback process is necessary to bootstrap initial testing.  These early tests will target finding issues with the proposed xml2rfc v3 vocabulary that result in poorly formed publication formats as well as issues that prevent proper review of submitted drafts.</t>
 
-<t>Feedback will result in regular iteration of the basic code and XML vocabulary.  In order to limit the amount of time the RFC Production Center (RPC) spends on testing and QA, note that their priority is to edit and publish documents, community assistance will be necessary to help move this stage along.  A mailing list and experimental source directory on the RFC Editor website will be created for community members willing to assist in the detailed review of the XML and publication formats.  Editorial checks are out of scope; the focus will be the QA of each available output, checking for inconsistencies across formats.</t>
+<t>Feedback will result in regular iteration of the basic code and XML vocabulary.  In order to limit the amount of time the RFC Production Center (RPC) spends on testing and QA, note that their priority is to edit and publish documents, community assistance will be necessary to help move this stage along.  A mailing list and experimental source directory on the RFC Editor website will be created for community members willing to assist in the detailed review of the XML and publication formats.  Editorial checks of the publication formats by the community are out of scope; the focus will be the QA of each available output, checking for inconsistencies across formats.</t>
 
 <t>The purpose of testing phase is to work with the community to identify and fix bugs in the process and the code, before producing canonical, immutable XML, and to collect additional feedback on the usability of the new publication formats.</t>
 
 <t>Success will be measured by the closure of all bugs which had been identified by the RPC and the Tools Development team as fatal and consensus on the readiness of the XML vocabulary and final XML files for publication.  The actual rendering engine can go through further review and iteration, as the publication formats may be republished as needed.</t>
 
-<t>Authors are not required to submit their approved drafts in an XML format; plain-text will remain an option for the foreseeable future.  However, documents submitted as plain-text will not have a canonical XML file associated with them; only the output formats will be published.  In these cases, the PDF/A-3 will be considered the canonical, unchanging file reviewed by authors, targeted for archiving, and supplied as the authenticated RFC by the RFC Editor.</t>
+<t>Authors are not required to submit their approved drafts in an XML format; plain-text will also remain an option for the foreseeable future.  However, documents submitted as plain-text will not have a canonical XML file associated with them and cannot include such features as SVG artwork; only the output formats will be published.  In these cases, the PDF/A-3 will be considered the canonical, unchanging file reviewed by authors, targeted for archiving, and supplied as the authenticated RFC by the RFC Editor.</t>
 
 <t>A known risk at this point of the transition is the difficulty in quantifying the resources required from the RPC.  This phase will require more work on the part of the RPC to support both old and new publication processes for at least six months.  There is potential for confusion as consumers of RFCs find some documents published at this time with a full set of outputs, while other documents only have plain text.  There may be a delay in publication as new bugs are found that must be fixed before the files can be converted into the canonical format and associated publication formats.</t>
 
