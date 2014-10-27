@@ -24,7 +24,7 @@
       </address>
     </author>
 
-    <date year="2014" month="October" day="17"/>
+    <date year="2014" month="October" day="27"/>
     
 
     <abstract>
@@ -237,7 +237,7 @@
 
 <t>Success will be measured by the closure of all bugs which had been identified by the RPC and the Tools Development team as fatal and consensus on the readiness of the XML vocabulary and final XML files for publication.  The actual rendering engine can go through further review and iteration, as the publication formats may be republished as needed.</t>
 
-<t>Authors are not required to submit their approved drafts in an XML format; plain-text will also remain an option for the foreseeable future.  However, documents submitted as plain-text will not have a canonical XML file associated with them and cannot include such features as SVG artwork; only the output formats will be published.  In these cases, the PDF/A-3 will be considered the canonical, unchanging file reviewed by authors, targeted for archiving, and supplied as the authenticated RFC by the RFC Editor.</t>
+<t>Authors are not required to submit their approved drafts in an XML format; plain-text will also remain an option for the foreseeable future.  However, documents submitted as plain-text and cannot include such features as SVG artwork.</t>
 
 <t>A known risk at this point of the transition is the difficulty in quantifying the resources required from the RPC.  This phase will require more work on the part of the RPC to support both old and new publication processes for at least six months.  There is potential for confusion as consumers of RFCs find some documents published at this time with a full set of outputs, while other documents only have plain text.  There may be a delay in publication as new bugs are found that must be fixed before the files can be converted into the canonical format and associated publication formats.</t>
 
@@ -245,7 +245,7 @@
 
 </section>
 <section anchor="completion" title="Completion">
-<t>Authors may submit XML (preferred) or plain text.  The XML drafts submitted for publication will be converted to canonical XML format and published with all available publication formats.  All authors will be expected to review the XML and PDF/A-3 formats prior to publication.  While tools will be available to the community to convert (as much as is practicable) plain text to XML, the RPC will not be responsible for the conversion to a canonical XML file; any XML created by the RPC will be to aid the editing process and will not be published as a canonical XML file.  All I-Ds submitted as XML will be published with a canonical XML format and all available publication formats.</t>
+<t>Authors may submit XML (preferred) or plain text.  The XML drafts submitted for publication will be converted to canonical XML format and published with all available publication formats.  All authors will be expected to review the XML and the publication formats prior to publication. Further process detail still under discussion.</t> 
 
 <t>Success for this phase will be measured by a solid understanding by the RSE and the IAOC of the necessary costs and resources required for long-term support of the new format model.</t>
 
@@ -272,23 +272,23 @@
 <t>draft-flanagan-rfc-framework-02</t>
 <t><list style='symbols'>
   <t>HTML: Fixed the statement on semantic HTML to capture intended balance between CSS and HTML.</t>
-  <t>Transition: Major changes to overall plan, emphasizing a more iterative process for tool development; also removed statement that I-Ds submitted as plain-text would only be published as plain-text</t>
+  <t>Transition: Major changes to overall plan, emphasizing a more iterative process for tool development; also removed statement that I-Ds submitted as plain-text would only be published as plain-text.  The final process for publication and review has been marked as under discussion.</t>
 </list></t>
 
 <t>draft-flanagan-rfc-framework-01</t>
 <t><list style='symbols'>
-  <t>Problem Statement: Added educators and managers to the list of communities impacted by the format of the RFC Series</t>
-  <t>Terminology: Removed comment about RFC 2119</t>
+  <t>Problem Statement: Added educators and managers to the list of communities impacted by the format of the RFC Series.</t>
+  <t>Terminology: Removed comment about RFC 2119.</t>
   <t>Overview of the Decision Making Process: Added a point about conversation with the IETF, IRTF, IAB, and IAOC chairs, and the ISE.  Indicated that the RSE brought together the RFC Format Design Team.  Added a proper citation tag for the NORDUnet 2014 conference.</t>
   <t>Key Changes: Removed "canonical" from description of the plain-text file.</t>
   <t>Document Summary: Removed "Section 6. Document Summary" and moved key points for the different formats in the "Canonical Format Documents" and "Publication Format Documents" sections.</t>
-  <t>XML for RFCs: Reworded bullet points to offer complete sentences.  Added a statement regarding the DTD.  Changed mention of "v2 vocabulary" and "v3 vocabulary: to XML2RFC v2/v3 vocabulary</t>
+  <t>XML for RFCs: Reworded bullet points to offer complete sentences.  Added a statement regarding the DTD.  Changed mention of "v2 vocabulary" and "v3 vocabulary: to XML2RFC v2/v3 vocabulary.</t>
   <t>HTML: Reworded bullet points to offer complete sentences.  Added "complete" to statement about JavaScript.</t>
   <t>PDF: Reworded bullet points to offer complete sentences.</t>
   <t>Plain Text: Reworded bullet points to offer complete sentences.  Added reference for "widow and orphan control."</t>
   <t>Transition Plan: Added a "Tool Development Phase" to the Transition Plan.</t>
   <t>Transition Phase: Emphasized the possibility of dropping back to publishing plain text documents if bugs are found that prevent timely creation of RFCs.</t>
-  <t>Completion: Revised the expectation to indicate the RPC will not do the text to XML conversion for the authors.  Added the statement that all drafts submitted with an XML file will be published as a canonical XML and all available publication formats.</t>
+  <t>Completion: Revised the expectation to indicate the RPC may perform the text to XML conversion for the authors.  Added the statement that all drafts submitted with an XML file will be published as a canonical XML and all available publication formats.</t>
 </list></t>
 </section>
 
