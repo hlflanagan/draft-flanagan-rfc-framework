@@ -7,7 +7,7 @@
 <!ENTITY RFC6635 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6635.xml">
 ]>
 
-<rfc ipr="trust200902" docName="draft-flanagan-rfc-framework-02" category="info">
+<rfc ipr="trust200902" docName="draft-flanagan-rfc-framework-03" category="info">
 
 <?rfc toc="yes"?>
 
@@ -24,7 +24,7 @@
       </address>
     </author>
 
-    <date year="2014" month="October" day="27"/>
+    <date year="2014" month="December" day="11"/>
     
 
     <abstract>
@@ -133,7 +133,13 @@
   <t>Authors may submit drafts in XML2RFC v2 vocabulary, but the final publication will convert that to XML2RFC v3 vocabulary.</t>
   <t>SVG is supported and will be embedded in the final XML file (see section 6.3.1).</t>
   <t>There will be automatically generated identifiers for sections, paragraphs, figures, and tables in the final XML file.</t>
+  <t>The XML file will not contain any v3 vocabulary elements or attributes that have been marked deprecated. </t>
   <t>A Document Type Definition (DTD) will no longer be used.</t>
+  <t>The final XML file will contain, verbatim, the appropriate boilerplate specified by RFC 5741.</t>
+  <t>The final XML will be self-contained. For instance, all features that reference externally-defined input will be expanded. This includes all uses of xinclude, src attributes (such as in &lt;artwork&gt; or &lt;sourcecode&gt; elements), include-like processing instructions, and externally defined entities.</t>
+  <t>The final XML will not contain comments or processing instructions.</t>
+  <t>he final XML will not contain src attributes for &lt;artwork&gt; or 
+&lt;sourcecode&gt; elements.</t>
 </list></t>
 
 <t><xref target="draft-reschke-xml2rfc"/> Describes the xml2rfc v2 vocabulary.  While in wide use today, this vocabulary had not been formally documented.  In order to understand what needed to change in the vocabulary to allow for a more simple experience and additional features for authors, the current vocabulary needed to be fully described.  This document, when published, will be obsoleted by the RFC published from draft-hoffman-xml2rfc.</t>
@@ -237,7 +243,7 @@
 
 <t>Success will be measured by the closure of all bugs which had been identified by the RPC and the Tools Development team as fatal and consensus on the readiness of the XML vocabulary and final XML files for publication.  The actual rendering engine can go through further review and iteration, as the publication formats may be republished as needed.</t>
 
-<t>Authors are not required to submit their approved drafts in an XML format; plain-text will also remain an option for the foreseeable future.  However, documents submitted as plain-text and cannot include such features as SVG artwork.</t>
+<t>Authors are not required to submit their approved drafts in an XML format; plain-text will also remain an option for the foreseeable future.  However, documents submitted as plain-text cannot include such features as SVG artwork.</t>
 
 <t>A known risk at this point of the transition is the difficulty in quantifying the resources required from the RPC.  This phase will require more work on the part of the RPC to support both old and new publication processes for at least six months.  There is potential for confusion as consumers of RFCs find some documents published at this time with a full set of outputs, while other documents only have plain text.  There may be a delay in publication as new bugs are found that must be fixed before the files can be converted into the canonical format and associated publication formats.</t>
 
@@ -268,6 +274,11 @@
 
 <section anchor="changelog" title="Appendix - Change log">
 <t>To be removed by RFC Editor</t>
+
+<t>draft-flanagan-rfc-framework-03</t>
+<t><list style='symbols'>
+  <t>XML for RFCs: additional details on changes added</t>
+</list></t>
 
 <t>draft-flanagan-rfc-framework-02</t>
 <t><list style='symbols'>
