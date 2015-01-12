@@ -5,6 +5,15 @@
 <!ENTITY RFC6949 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6949.xml">
 <!ENTITY RFC4845 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.4845.xml">
 <!ENTITY RFC6635 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6635.xml">
+<!ENTITY RFC7322 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.7322.xml">
+<!ENTITY I-D.hoffman-xml2rfc SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.hoffman-xml2rfc.xml">
+<!ENTITY I-D.iab-xml2rfcv2 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.iab-xml2rfcv2.xml">
+<!ENTITY I-D.brownlee-svg-rfc SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.brownlee-svg-rfc.xml">
+<!ENTITY I-D.hansen-rfc-use-of-pdf SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.hansen-rfc-use-of-pdf.xml">
+<!ENTITY I-D.hildebrand-html-rfc SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.hildebrand-html-rfc.xml">
+<!ENTITY I-D.flanagan-plaintext SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.flanagan-plaintext.xml">
+<!ENTITY I-D.flanagan-nonascii SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.flanagan-nonascii.xml">
+
 ]>
 
 <rfc ipr="trust200902" docName="draft-flanagan-rfc-framework-03" category="info">
@@ -24,7 +33,7 @@
       </address>
     </author>
 
-    <date year="2014" month="December" day="11"/>
+    <date year="2015" month="January" day="12"/>
     
 
     <abstract>
@@ -32,11 +41,13 @@
 
 <t>The canonical format for the RFC Series has been plain-text, ASCII-encoded for several decades.  After extensive community discussion and debate, the RFC Editor will be transitioning to XML as the canonical format, with different publication formats rendered from that base document.  These changes are intended to increase the usability of the RFC Series by offering documents that match the needs of a wider variety of stakeholders.  With these changes, however, comes an increase in complexity for authors, consumers, and the publisher of RFCs.  This document serves as the framework that describes the problems being solved and summarizes the many documents that capture the specific requirements for each aspect of the change in format.</t>
 
-<t>Discussion of this draft takes place on the rfc-interest mailing list (rfc-interest@rfc-editor.org), which has its home page at https://www.rfc-editor.org/mailman/listinfo/rfc-interest.</t>
-
-
-
     </abstract>
+
+<note title="Editorial Note (To be removed by RFC Editor)">
+<t>Discussion of this draft takes place on the rfc-interest mailing list (rfc-interest@rfc-editor.org), which has its home page at https://www.rfc-editor.org/mailman/listinfo/rfc-interest.</t>
+</note>
+
+
 
 
   </front>
@@ -87,7 +98,7 @@
 </list></t>
 
 <t><list style='empty'>
-  <t>Revisable format: the format that will provide the information for conversion into a Publication format; it is used or created by the RFC Editor (see Section 2.3 for an explanation of current practice)</t>
+  <t>Revisable format: the format that will provide the information for conversion into a Publication format; it is used or created by the RFC Editor</t>
 </list></t>
 
 <t><list style='empty'>
@@ -116,7 +127,7 @@
 </section>
 <section anchor="key-changes" title="Key Changes">
 
-<t>At the highest level, the changes being made to the RFC Format involve breaking away from a pure-ASCII mode and moving to canonical format that includes all the information required for rendering a document into a wide variety of publication formats.  The RFC Editor will become responsible for more than just the plain-text file and the PDF-from-text format created at time of publication; they will be creating several different formats in order to meet the diverse requirements of the community.</t>
+<t>At the highest level, the changes being made to the RFC Format involve breaking away from a pure-ASCII plain text and moving to canonical format that includes all the information required for rendering a document into a wide variety of publication formats.  The RFC Editor will become responsible for more than just the plain-text file and the PDF-from-text format created at time of publication; they will be creating several different formats in order to meet the diverse requirements of the community.</t>
 
 <t>The final XML file produced by the RFC Editor will be considered the canonical format for RFCs; it is the lowest common denominator that holds all the information intended for an RFC.  PDF/A-3 will be the publication format offered in response to subpoenas for RFCs published through this new process, and will be developed with an eye towards long-term archival storage.  HTML will be the focus of providing the most flexible set of features for an RFC, including JavaScript to provide pointers to errata and other metadata.  Plain-text will continue to be offered in order to support existing tool chains where practicable and the individuals who prefer to read RFCs in this format.</t>
 
@@ -129,12 +140,12 @@
 <t>Key points regarding the XML format:</t>
 
 <t><list style='symbols'>
-  <t>The canonical format for RFCs is XML2RFC using vocabulary described in "The 'XML2RFC' version 3 Vocabulary" <xref target="draft-hoffman-xml2rfc"/>. This file must contain all information necessary to render a variety of formats; any question about what was intended in the publication will be answered from this format.</t>
+  <t>The canonical format for RFCs is XML2RFC using vocabulary described in "The 'XML2RFC' version 3 Vocabulary" <xref target="I-D.hoffman-xml2rfc"/>. This file must contain all information necessary to render a variety of formats; any question about what was intended in the publication will be answered from this format.</t>
   <t>Authors may submit drafts in XML2RFC v2 vocabulary, but the final publication will convert that to XML2RFC v3 vocabulary.</t>
-  <t>SVG is supported and will be embedded in the final XML file (see section 6.3.1).</t>
+  <t>SVG is supported and will be embedded in the final XML file.</t>
   <t>There will be automatically generated identifiers for sections, paragraphs, figures, and tables in the final XML file.</t>
   <t>The XML file will not contain any v3 vocabulary elements or attributes that have been marked deprecated. </t>
-  <t>A Document Type Definition (DTD) will no longer be used.</t>
+  <t>A Document Type Definition (DTD) will no longer be used.   The grammar will be defined using RelaxNG.</t>
   <t>The final XML file will contain, verbatim, the appropriate boilerplate specified by RFC 5741.</t>
   <t>The final XML will be self-contained. For instance, all features that reference externally-defined input will be expanded. This includes all uses of xinclude, src attributes (such as in &lt;artwork&gt; or &lt;sourcecode&gt; elements), include-like processing instructions, and externally defined entities.</t>
   <t>The final XML will not contain comments or processing instructions.</t>
@@ -142,16 +153,16 @@
 &lt;sourcecode&gt; elements.</t>
 </list></t>
 
-<t><xref target="draft-reschke-xml2rfc"/> Describes the xml2rfc v2 vocabulary.  While in wide use today, this vocabulary had not been formally documented.  In order to understand what needed to change in the vocabulary to allow for a more simple experience and additional features for authors, the current vocabulary needed to be fully described.  This document, when published, will be obsoleted by the RFC published from draft-hoffman-xml2rfc.</t>
+<t><xref target="I-D.iab-xml2rfcv2"/> Describes the xml2rfc v2 vocabulary.  While in wide use today, this vocabulary had not been formally documented.  In order to understand what needed to change in the vocabulary to allow for a more simple experience and additional features for authors, the current vocabulary needed to be fully described.  This document, when published, will be obsoleted by the RFC published from draft-hoffman-xml2rfc.</t>
 
-<t><xref target="draft-hoffman-xml2rfc"/> Describes the xml2rfc v3 vocabulary.  The design goals in this vocabulary were to make the vocabulary more intuitive for authors, and to expand the features to support the changes being made in the publication process.  This draft, when published, will obsolete the RFC published from draft-reschke-xml2rfc.</t>
+<t><xref target="I-D.hoffman-xml2rfc"/> Describes the xml2rfc v3 vocabulary.  The design goals in this vocabulary were to make the vocabulary more intuitive for authors, and to expand the features to support the changes being made in the publication process.  This draft, when published, will obsolete the RFC published from draft-iab-xml2rfcv2.</t>
 
 </section>
 </section>
 <section anchor="publication-format-documents" title="Publication Format Documents">
 
 <section anchor="html" title="HTML">
-<t><xref target="draft-hildebrand-html-rfc"/> - Describes the semantic HTML that will be produced by the RFC Editor from the xml2rfc v3 files.</t>
+<t><xref target="I-D.hildebrand-html-rfc"/> - Describes the semantic HTML that will be produced by the RFC Editor from the xml2rfc v3 files.</t>
 
 <t>Key points regarding the HTML output:</t>
 
@@ -166,7 +177,7 @@
 
 </section>
 <section anchor="pdf" title="PDF">
-<t><xref target="draft-hansen-rfc-use-of-pdf"/> - Describes the tags and profiles that will be used to create the new PDF format, including both the internal structure and the visible layout of the file.  A review of the different versions of PDF is offered, with a recommendation of what PDF standard should apply to RFCs.</t>
+<t><xref target="I-D.hansen-rfc-use-of-pdf"/> - Describes the tags and profiles that will be used to create the new PDF format, including both the internal structure and the visible layout of the file.  A review of the different versions of PDF is offered, with a recommendation of what PDF standard should apply to RFCs.</t>
 
 <t>Key points regarding the PDF output:</t>
 
@@ -180,7 +191,7 @@
 
 </section>
 <section anchor="plain-text" title="Plain Text">
-<t><xref target="draft-flanagan-plaintext"/> - Describes the details of the plain text format, focusing in particular on what is changing from the existing plain-text output.</t>
+<t><xref target="I-D.flanagan-plaintext"/> - Describes the details of the plain text format, focusing in particular on what is changing from the existing plain-text output.</t>
 
 <t>Key points regarding the plain-text output:</t>
 
@@ -206,18 +217,18 @@
 <section anchor="figures-and-artwork" title="Figures and Artwork">
 
 <section anchor="svg" title="SVG">
-<t><xref target="draft-brownlee-svg-rfc"/> Describes the profile for SVG line art.  SVG is an XML-based vocabulary for creating line drawings; SVG information will be embedded within the canonical XML at time of publication.</t>
+<t><xref target="I-D.brownlee-svg-rfc"/> Describes the profile for SVG line art.  SVG is an XML-based vocabulary for creating line drawings; SVG information will be embedded within the canonical XML at time of publication.</t>
 
 </section>
 </section>
 <section anchor="content-and-page-layout" title="Content and Page Layout">
 
 <section anchor="non-ascii-characters" title="Non-ASCII Characters">
-<t>There are security and readability implications to moving outside the ASCII range of characters.  <xref target="draft-flanagan-nonascii"/> focuses on exactly where and how non-ASCII characters may be used in an RFC, with an eye towards keeping the documents as secure and readable as possible given the information that needs to be expressed.</t>
+<t>There are security and readability implications to moving outside the ASCII range of characters.  <xref target="I-D.flanagan-nonascii"/> focuses on exactly where and how non-ASCII characters may be used in an RFC, with an eye towards keeping the documents as secure and readable as possible given the information that needs to be expressed.</t>
 
 </section>
 <section anchor="style-guide" title="Style Guide">
-<t>The RFC Style Guide <xref target="draft-iab-styleguide"/> was revised to remove as much page formatting information as possible, focusing instead on grammar, structure, and content of RFCs.  Some of the changes recommended, however, informed the XML v3 vocabulary.</t>
+<t>The RFC Style Guide <xref target="RFC7322"/> was revised to remove as much page formatting information as possible, focusing instead on grammar, structure, and content of RFCs.  Some of the changes recommended, however, informed the XML v3 vocabulary.</t>
 
 </section>
 <section anchor="css-requirements" title="CSS Requirements">
@@ -278,6 +289,7 @@
 <t>draft-flanagan-rfc-framework-03</t>
 <t><list style='symbols'>
   <t>XML for RFCs: additional details on changes added</t>
+  <t>Fixed references</t>
 </list></t>
 
 <t>draft-flanagan-rfc-framework-02</t>
@@ -310,86 +322,13 @@
     <references title='Normative References'>
 
 &RFC6949;
-<reference anchor="draft-reschke-xml2rfc" >
-  <front>
-    <title>The 'XML2RFC' version 2 Vocabulary</title>
-    <author initials="J." surname="Reschke" fullname="Julian Reschke">
-      <organization></organization>
-    </author>
-    <date year="2014" month="July"/>
-  </front>
-  <seriesInfo name="draft-reschke-xml2rfc-10" value=""/>
-</reference>
-<reference anchor="draft-hoffman-xml2rfc">
-  <front>
-    <title>The 'XML2RFC' version 3 Vocabulary</title>
-    <author initials="P." surname="Hoffman" fullname="Paul Hoffman">
-      <organization></organization>
-    </author>
-    <date year="2014" month="July"/>
-  </front>
-  <seriesInfo name="draft-hoffman-xml2rfc-09" value=""/>
-</reference>
-<reference anchor="draft-brownlee-svg-rfc" >
-  <front>
-    <title>SVG Drawings for RFCs: SVG 1.2 RFC</title>
-    <author initials="N." surname="Brownlee" fullname="Nevil Brownlee">
-      <organization></organization>
-    </author>
-    <date year="2014" month="July"/>
-  </front>
-  <seriesInfo name="draft-brownlee-svg-rfc-07" value=""/>
-</reference>
-<reference anchor="draft-hildebrand-html-rfc">
-  <front>
-    <title>HyperText Markup Language Request For Comments Format</title>
-    <author initials="J." surname="Hildebrand" fullname="Joe Hildebrand">
-      <organization></organization>
-    </author>
-    <author initials="H." surname="Flanagan, ed" fullname="Heather Flanagan">
-      <organization></organization>
-    </author>
-    <date year="2014" month="June"/>
-  </front>
-  <seriesInfo name="draft-hildebrand-html-rfc-03" value=""/>
-</reference>
-<reference anchor="draft-hansen-rfc-use-of-pdf">
-  <front>
-    <title>PDF for an RFC Series Output Document Format</title>
-    <author initials="T." surname="Hansen" fullname="Tony Hansen">
-      <organization></organization>
-    </author>
-    <author initials="L." surname="Masinter" fullname="Larry Masinter">
-      <organization></organization>
-    </author>
-    <author initials="M." surname="Hardy" fullname="Matthew Hardy">
-      <organization></organization>
-    </author>
-    <date year="2014" month="July"/>
-  </front>
-  <seriesInfo name="draft-hansen-rfc-use-of-pdf-02" value=""/>
-</reference>
-<reference anchor="draft-flanagan-plaintext">
-  <front>
-    <title>Requirements for Plain Text RFCs</title>
-    <author initials="H." surname="Flanagan" fullname="Heather Flanagan">
-      <organization></organization>
-    </author>
-    <date year="2014" month="July"/>
-  </front>
-  <seriesInfo name="draft-flanagan-plaintext-01" value=""/>
-</reference>
-<reference anchor="draft-flanagan-nonascii">
-  <front>
-    <title>The Use of Non-ASCII Characters in RFCs</title>
-    <author initials="H." surname="Flanagan" fullname="Heather Flanagan">
-      <organization></organization>
-    </author>
-    <date year="2014" month="July"/>
-  </front>
-  <seriesInfo name="draft-flanagan-nonascii-03" value=""/>
-</reference>
-
+&I-D.hoffman-xml2rfc;
+&I-D.iab-xml2rfcv2;
+&I-D.brownlee-svg-rfc;
+&I-D.hildebrand-html-rfc;
+&I-D.hansen-rfc-use-of-pdf;
+&I-D.flanagan-plaintext;
+&I-D.flanagan-nonascii;
 
     </references>
 
@@ -397,19 +336,7 @@
 
 &RFC4845;
 &RFC6635;
-<reference anchor="draft-iab-styleguide">
-  <front>
-    <title>The RFC Style Guide</title>
-    <author initials="H." surname="Flanagan" fullname="Heather Flanagan">
-      <organization></organization>
-    </author>
-    <author initials="S." surname="Ginoza" fullname="Sandy Ginoza">
-      <organization></organization>
-    </author>
-    <date year="2014" month="April"/>
-  </front>
-  <seriesInfo name="draft-iab-styleguide-02" value=""/>
-</reference>
+&RFC7322;
 <reference anchor="GEN-ART" target="http://www.ietf.org/iesg/directorate/gen-art.html">
   <front>
     <title>General Area Review Team (Gen-ART)</title>
