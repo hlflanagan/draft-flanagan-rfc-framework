@@ -16,7 +16,7 @@
 
 ]>
 
-<rfc ipr="trust200902" docName="draft-flanagan-rfc-framework-03" category="info">
+<rfc ipr="trust200902" docName="draft-flanagan-rfc-framework-04" category="info">
 
 <?rfc toc="yes"?>
 
@@ -26,14 +26,12 @@
     <author initials="H." surname="Flanagan" fullname="Heather Flanagan">
       <organization>RFC Editor</organization>
       <address>
-        
-        
         <email>rse@rfc-editor.org</email>
-        
+        <uri>http://orcid.org/0000-0002-2647-2220</uri>
       </address>
     </author>
 
-    <date year="2015" month="January" day="12"/>
+    <date year="2015" month="June" day="21"/>
     
 
     <abstract>
@@ -140,7 +138,8 @@
 <t>Key points regarding the XML format:</t>
 
 <t><list style='symbols'>
-  <t>The canonical format for RFCs is XML2RFC using vocabulary described in "The 'XML2RFC' version 3 Vocabulary" <xref target="I-D.hoffman-xml2rfc"/>. This file must contain all information necessary to render a variety of formats; any question about what was intended in the publication will be answered from this format.</t>
+  <t>The canonical format for RFCs is XML using the XML2RFC v3 vocabulary
+<xref target="I-D.hoffman-xml2rfc"/>.  This file must contain all information necessary to render a variety of formats; any question about what was intended in the publication will be answered from this format.</t>
   <t>Authors may submit drafts in XML2RFC v2 vocabulary, but the final publication will convert that to XML2RFC v3 vocabulary.</t>
   <t>SVG is supported and will be embedded in the final XML file.</t>
   <t>There will be automatically generated identifiers for sections, paragraphs, figures, and tables in the final XML file.</t>
@@ -168,10 +167,10 @@
 
 <t><list style='symbols'>
   <t>The HTML will not be derived from the plain-text publication format.</t>
-  <t>The body of the document will use normal HTML format tags. The documents will include CSS for non-default formatting, and all CSS will be able to be overridden by local CSS files.</t> 
+  <t>The body of the document will use a subset of HTML. The documents will include CSS for default visual presentation; it can be overwritten by a local CSS file.</t> 
   <t>SVG is supported and will be included in the HTML file.</t>
   <t>Text will be reflowable.</t>
-  <t>JavaScript will be supported only as a publication option to provide up-to-date links to errata and obsoleted or obsoleting RFCs; documents will be complete and readable when JavaScript is disabled.</t>
+  <t>JavaScript will be supported only as an additional option for presentation of specific publication formats to provide up-to-date links to post-publication metadata, such as errata or obsoletion.  Documents will be complete and readable when JavaScript is disabled.</t>
 </list></t>
 
 
@@ -196,7 +195,8 @@
 <t>Key points regarding the plain-text output:</t>
 
 <t><list style='symbols'>
-  <t>The plain-text document will no longer be the canonical version of an RFC, unless it is the only format of an approved I-D submitted to the RFC Editor.</t>
+  <t>The plain-text document will no longer be the canonical version of an RFC.
+  </t>
   <t>The plain-text format will be UTF-8 encoded; non-ASCII characters will be allowed.</t>
   <t>A Byte Order Mark (BOM) will be added at the start of each file.</t>
   <t>Widow and orphan control for the plain-text publication format will not have priority for the developers creating the rendering code <xref target="TYPOGRAPHY"/>.</t>
@@ -285,6 +285,11 @@
 
 <section anchor="changelog" title="Appendix - Change log">
 <t>To be removed by RFC Editor</t>
+
+<t>draft-flanagan-rfc-framework-04</t>
+<t><list style='simbols'>
+  <t>Minor wording cleanup</t>
+</list></t>
 
 <t>draft-flanagan-rfc-framework-03</t>
 <t><list style='symbols'>
