@@ -16,7 +16,7 @@
 
 ]>
 
-<rfc ipr="trust200902" docName="draft-flanagan-rfc-framework-04" category="info">
+<rfc ipr="trust200902" docName="draft-flanagan-rfc-framework-05" category="info">
 
 <?rfc toc="yes"?>
 
@@ -31,7 +31,7 @@
       </address>
     </author>
 
-    <date year="2015" month="June" day="21"/>
+    <date year="2015" month="August" day="12"/>
     
 
     <abstract>
@@ -60,6 +60,9 @@
 <t>Key changes to the publication of RFCs are highlighted, and a transition plan that will take the Series from a plain-text, ASCII-only format to the new formats is described <xref target="RFC-INTEREST"/>.</t>
 
 <t>This document is concerned with the production of RFCs, focusing on the published formats. It does not address any changes to the processes each stream uses to develop and review their submissions (specifically, how Internet-Drafts will be developed).  While I-Ds have a similar set of issues and concerns, directly addressing those issues for I-Ds will be discussed within each document stream.</t>
+
+<t>The details described in this document are expected to change based on experience gained in implementing the RFC production center's toolset. Revised documents will be published capturing those changes as the toolset is completed. Other implementers must not expect those changes to remain backwards-compatible with the details described this document.</t>
+
 
 </section>
 <section anchor="problem-statement" title="Problem Statement">
