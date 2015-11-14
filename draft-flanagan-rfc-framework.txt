@@ -4,8 +4,8 @@
 
 Network Working Group                                        H. Flanagan
 Internet-Draft                                                RFC Editor
-Intended status: Informational                          October 13, 2015
-Expires: April 15, 2016
+Intended status: Informational                         November 14, 2015
+Expires: May 17, 2016
 
 
                           RFC Format Framework
@@ -47,15 +47,15 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on April 15, 2016.
+   This Internet-Draft will expire on May 17, 2016.
 
 
 
 
 
-Flanagan                 Expires April 15, 2016                 [Page 1]
+Flanagan                  Expires May 17, 2016                  [Page 1]
 
-Internet-Draft            RFC Format Framework              October 2015
+Internet-Draft            RFC Format Framework             November 2015
 
 
 Copyright Notice
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Flanagan                 Expires April 15, 2016                 [Page 2]
+Flanagan                  Expires May 17, 2016                  [Page 2]
 
-Internet-Draft            RFC Format Framework              October 2015
+Internet-Draft            RFC Format Framework             November 2015
 
 
 1.  Introduction
@@ -165,9 +165,9 @@ Internet-Draft            RFC Format Framework              October 2015
 
 
 
-Flanagan                 Expires April 15, 2016                 [Page 3]
+Flanagan                  Expires May 17, 2016                  [Page 3]
 
-Internet-Draft            RFC Format Framework              October 2015
+Internet-Draft            RFC Format Framework             November 2015
 
 
    time.  For example, existing authors and implementers, lawyers that
@@ -221,9 +221,9 @@ Internet-Draft            RFC Format Framework              October 2015
 
 
 
-Flanagan                 Expires April 15, 2016                 [Page 4]
+Flanagan                  Expires May 17, 2016                  [Page 4]
 
-Internet-Draft            RFC Format Framework              October 2015
+Internet-Draft            RFC Format Framework             November 2015
 
 
    The first document published, RFC 6949, provided the first solid
@@ -277,9 +277,9 @@ Internet-Draft            RFC Format Framework              October 2015
 
 
 
-Flanagan                 Expires April 15, 2016                 [Page 5]
+Flanagan                  Expires May 17, 2016                  [Page 5]
 
-Internet-Draft            RFC Format Framework              October 2015
+Internet-Draft            RFC Format Framework             November 2015
 
 
 5.  Key Changes
@@ -333,9 +333,9 @@ Internet-Draft            RFC Format Framework              October 2015
 
 
 
-Flanagan                 Expires April 15, 2016                 [Page 6]
+Flanagan                  Expires May 17, 2016                  [Page 6]
 
-Internet-Draft            RFC Format Framework              October 2015
+Internet-Draft            RFC Format Framework             November 2015
 
 
    o  The final XML file will contain, verbatim, the appropriate
@@ -389,9 +389,9 @@ Internet-Draft            RFC Format Framework              October 2015
 
 
 
-Flanagan                 Expires April 15, 2016                 [Page 7]
+Flanagan                  Expires May 17, 2016                  [Page 7]
 
-Internet-Draft            RFC Format Framework              October 2015
+Internet-Draft            RFC Format Framework             November 2015
 
 
    o  JavaScript will be supported only as an additional option for
@@ -445,9 +445,9 @@ Internet-Draft            RFC Format Framework              October 2015
 
 
 
-Flanagan                 Expires April 15, 2016                 [Page 8]
+Flanagan                  Expires May 17, 2016                  [Page 8]
 
-Internet-Draft            RFC Format Framework              October 2015
+Internet-Draft            RFC Format Framework             November 2015
 
 
    o  Widow and orphan control for the plain-text publication format
@@ -501,9 +501,9 @@ Internet-Draft            RFC Format Framework              October 2015
 
 
 
-Flanagan                 Expires April 15, 2016                 [Page 9]
+Flanagan                  Expires May 17, 2016                  [Page 9]
 
-Internet-Draft            RFC Format Framework              October 2015
+Internet-Draft            RFC Format Framework             November 2015
 
 
 9.3.  CSS Requirements
@@ -557,9 +557,9 @@ Internet-Draft            RFC Format Framework              October 2015
 
 
 
-Flanagan                 Expires April 15, 2016                [Page 10]
+Flanagan                  Expires May 17, 2016                 [Page 10]
 
-Internet-Draft            RFC Format Framework              October 2015
+Internet-Draft            RFC Format Framework             November 2015
 
 
    canonical, immutable XML, and to collect additional feedback on the
@@ -613,9 +613,9 @@ Internet-Draft            RFC Format Framework              October 2015
 
 
 
-Flanagan                 Expires April 15, 2016                [Page 11]
+Flanagan                  Expires May 17, 2016                 [Page 11]
 
-Internet-Draft            RFC Format Framework              October 2015
+Internet-Draft            RFC Format Framework             November 2015
 
 
 12.  Security Considerations
@@ -669,9 +669,9 @@ Internet-Draft            RFC Format Framework              October 2015
 
 
 
-Flanagan                 Expires April 15, 2016                [Page 12]
+Flanagan                  Expires May 17, 2016                 [Page 12]
 
-Internet-Draft            RFC Format Framework              October 2015
+Internet-Draft            RFC Format Framework             November 2015
 
 
    o  Overview of the Decision Making Process: Added a point about
@@ -725,9 +725,9 @@ Internet-Draft            RFC Format Framework              October 2015
 
 
 
-Flanagan                 Expires April 15, 2016                [Page 13]
+Flanagan                  Expires May 17, 2016                 [Page 13]
 
-Internet-Draft            RFC Format Framework              October 2015
+Internet-Draft            RFC Format Framework             November 2015
 
 
    [I-D.hoffman-xml2rfc]
@@ -740,7 +740,7 @@ Internet-Draft            RFC Format Framework              October 2015
 
    [I-D.brownlee-svg-rfc]
               Brownlee, N., "SVG Drawings for RFCs: SVG 1.2 RFC", draft-
-              brownlee-svg-rfc-12 (work in progress), September 2015.
+              brownlee-svg-rfc-13 (work in progress), October 2015.
 
    [I-D.hildebrand-html-rfc]
               Hildebrand, J. and P. Hoffman, "HyperText Markup Language
@@ -781,9 +781,9 @@ Internet-Draft            RFC Format Framework              October 2015
 
 
 
-Flanagan                 Expires April 15, 2016                [Page 14]
+Flanagan                  Expires May 17, 2016                 [Page 14]
 
-Internet-Draft            RFC Format Framework              October 2015
+Internet-Draft            RFC Format Framework             November 2015
 
 
    [RFC7322]  Flanagan, H. and S. Ginoza, "RFC Style Guide", RFC 7322,
@@ -837,9 +837,9 @@ Internet-Draft            RFC Format Framework              October 2015
 
 
 
-Flanagan                 Expires April 15, 2016                [Page 15]
+Flanagan                  Expires May 17, 2016                 [Page 15]
 
-Internet-Draft            RFC Format Framework              October 2015
+Internet-Draft            RFC Format Framework             November 2015
 
 
    [TYPOGRAPHY]
@@ -893,4 +893,4 @@ Author's Address
 
 
 
-Flanagan                 Expires April 15, 2016                [Page 16]
+Flanagan                  Expires May 17, 2016                 [Page 16]
