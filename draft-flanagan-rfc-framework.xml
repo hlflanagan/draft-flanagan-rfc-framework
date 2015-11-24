@@ -16,7 +16,7 @@
 
 ]>
 
-<rfc ipr="trust200902" docName="draft-flanagan-rfc-framework-05" category="info">
+<rfc ipr="trust200902" docName="draft-flanagan-rfc-framework-07" category="info">
 
 <?rfc toc="yes"?>
 
@@ -31,7 +31,7 @@
       </address>
     </author>
 
-    <date year="2015" month="August" day="20"/>
+    <date year="2015" month="November" day="24"/>
     
 
     <abstract>
@@ -151,7 +151,7 @@
   <t>The final XML file will contain, verbatim, the appropriate boilerplate specified by RFC 5741.</t>
   <t>The final XML will be self-contained. For instance, all features that reference externally-defined input will be expanded. This includes all uses of xinclude, src attributes (such as in &lt;artwork&gt; or &lt;sourcecode&gt; elements), include-like processing instructions, and externally defined entities.</t>
   <t>The final XML will not contain comments or processing instructions.</t>
-  <t>he final XML will not contain src attributes for &lt;artwork&gt; or 
+  <t>The final XML will not contain src attributes for &lt;artwork&gt; or 
 &lt;sourcecode&gt; elements.</t>
 </list></t>
 
@@ -204,7 +204,7 @@
   <t>A Byte Order Mark (BOM) will be added at the start of each file.</t>
   <t>Widow and orphan control for the plain-text publication format will not have priority for the developers creating the rendering code <xref target="TYPOGRAPHY"/>.</t>
   <t>Authors may choose to have pointers to line art in other publication formats in place of ASCII art in the .txt file.</t>
-  <t>Both a paginated and an unpaginated plain-text file will be created.</t>
+  <t>A paginated plain-text file will be created that includes a form feed instruction every 58 lines (at most), including blank lines. Instructions or a s cript will be made available by and for the community to strip out pagination as per individual preference.</t>
   <t>Running headers and footers will not be used.</t>
 </list></t>
 
@@ -289,8 +289,23 @@
 <section anchor="changelog" title="Appendix - Change log">
 <t>To be removed by RFC Editor</t>
 
+<t>draft-flanagan-rfc-framework-07</t>
+<t><list style='symbols'>
+  <t>Brought old pagination text in alignment with requirements set out in draft-flanagan-plaintext</t>
+</list></t>
+
+<t>draft-flanagan-rfc-framework-06</t>
+<t><list style='symbols'>
+  <t>Minor wording cleanup; addition of pointer to discussion re: transition plans</t>
+</list></t>
+
+<t>draft-flanagan-rfc-framework-05</t>
+<t><list style='symbols'>
+  <t>Introduction: added text re: backwards compatibility</t>
+</list></t>
+
 <t>draft-flanagan-rfc-framework-04</t>
-<t><list style='simbols'>
+<t><list style='symbols'>
   <t>Minor wording cleanup</t>
 </list></t>
 
