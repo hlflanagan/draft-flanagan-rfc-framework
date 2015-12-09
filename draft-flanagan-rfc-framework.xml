@@ -13,10 +13,11 @@
 <!ENTITY I-D.hildebrand-html-rfc SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.hildebrand-html-rfc.xml">
 <!ENTITY I-D.flanagan-plaintext SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.flanagan-plaintext.xml">
 <!ENTITY I-D.flanagan-nonascii SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.flanagan-nonascii.xml">
+<!ENTITY I-D.flanagan-rfc-css SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.flanagan-rfc-css.xml">
 
 ]>
 
-<rfc ipr="trust200902" docName="draft-flanagan-rfc-framework-05" category="info">
+<rfc ipr="trust200902" docName="draft-flanagan-rfc-framework-08" category="info">
 
 <?rfc toc="yes"?>
 
@@ -31,7 +32,7 @@
       </address>
     </author>
 
-    <date year="2015" month="August" day="20"/>
+    <date year="2015" month="December" day="90"/>
     
 
     <abstract>
@@ -71,7 +72,7 @@
 
 <t>Today, there are nearly three billion people connected to the Internet, and individuals from 45 countries or more regularly attending IETF meetings over the last 5 years <xref target="ISTATS"/>.  The Internet is now global, and while the world has changed from when the first RFCs were published, the Series remains critical to defining protocols, standards, best practices, and more for this global network that continues to grow.  In order to make RFCs easily viewable to the largest number of people possible, across a wide array of devices, and to respect the diversity of authors and reference materials, it is time to update the tightly prescribed format of the RFC Series.</t>
 
-<t>All changes to the format of the RFC Series must consider the requirements of a wide set of communities, over an extended length of time.  For example, existing authors and implementers, lawyers that argue Intellectual Property Rights (IPR), educators, managers, and policy-makers that need to know what to list in potential RFPs for their organizations, all have preferences and requirements for their specific needs.  The immediate needs of today's communities must be balanced with the needs for long-term archival storage.  </t>
+<t>All changes to the format of the RFC Series must consider the requirements of a wide set of communities, over an extended length of time.  For example, existing authors and implementers, lawyers that argue Intellectual Property Rights (IPR) cases, educators, managers, and policy-makers that need to know what to list in potential RFPs for their organizations, all have preferences and requirements for their specific needs.  The immediate needs of today's communities must be balanced with the needs for long-term archival storage.  </t>
 
 </section>
 <section anchor="terminology" title="Terminology">
@@ -128,7 +129,7 @@
 </section>
 <section anchor="key-changes" title="Key Changes">
 
-<t>At the highest level, the changes being made to the RFC Format involve breaking away from a pure-ASCII plain text and moving to canonical format that includes all the information required for rendering a document into a wide variety of publication formats.  The RFC Editor will become responsible for more than just the plain-text file and the PDF-from-text format created at time of publication; they will be creating several different formats in order to meet the diverse requirements of the community.</t>
+<t>At the highest level, the changes being made to the RFC Format involve breaking away from a pure-ASCII plain text and moving to a canonical format that includes all the information required for rendering a document into a wide variety of publication formats.  The RFC Editor will become responsible for more than just the plain-text file and the PDF-from-text format created at time of publication; they will be creating several different formats in order to meet the diverse requirements of the community.</t>
 
 <t>The final XML file produced by the RFC Editor will be considered the canonical format for RFCs; it is the lowest common denominator that holds all the information intended for an RFC.  PDF/A-3 will be the publication format offered in response to subpoenas for RFCs published through this new process, and will be developed with an eye towards long-term archival storage.  HTML will be the focus of providing the most flexible set of features for an RFC, including JavaScript to provide pointers to errata and other metadata.  Plain-text will continue to be offered in order to support existing tool chains where practicable and the individuals who prefer to read RFCs in this format.</t>
 
@@ -151,7 +152,7 @@
   <t>The final XML file will contain, verbatim, the appropriate boilerplate specified by RFC 5741.</t>
   <t>The final XML will be self-contained. For instance, all features that reference externally-defined input will be expanded. This includes all uses of xinclude, src attributes (such as in &lt;artwork&gt; or &lt;sourcecode&gt; elements), include-like processing instructions, and externally defined entities.</t>
   <t>The final XML will not contain comments or processing instructions.</t>
-  <t>he final XML will not contain src attributes for &lt;artwork&gt; or 
+  <t>The final XML will not contain src attributes for &lt;artwork&gt; or 
 &lt;sourcecode&gt; elements.</t>
 </list></t>
 
@@ -204,7 +205,7 @@
   <t>A Byte Order Mark (BOM) will be added at the start of each file.</t>
   <t>Widow and orphan control for the plain-text publication format will not have priority for the developers creating the rendering code <xref target="TYPOGRAPHY"/>.</t>
   <t>Authors may choose to have pointers to line art in other publication formats in place of ASCII art in the .txt file.</t>
-  <t>Both a paginated and an unpaginated plain-text file will be created.</t>
+  <t>A paginated plain-text file will be created that includes a form feed instruction every 58 lines (at most), including blank lines. Instructions or a s cript will be made available by and for the community to strip out pagination as per individual preference.</t>
   <t>Running headers and footers will not be used.</t>
 </list></t>
 
@@ -235,7 +236,7 @@
 
 </section>
 <section anchor="css-requirements" title="CSS Requirements">
-<t>Requirements under development; a draft will be posted and described here in a later revision of this framework.</t>
+<t>A Cascading Style Sheet (CSS) is required to allow the HTML format to be accessible and flexible across a variety of devices. Requirements for the CSS that will be included with the HTML output are captured in <xref target="I-D.flanagan-rfc-css"/>.</t>
 
 </section>
 </section>
@@ -288,6 +289,26 @@
 
 <section anchor="changelog" title="Appendix - Change log">
 <t>To be removed by RFC Editor</t>
+<t>draft-flanagan-rfc-framework-08</t>
+<t><list style='symbols'>
+  <t>Fixed empty section on CSS requirements</t>
+</list></t>
+
+<t>draft-flanagan-rfc-framework-07</t>
+<t><list style='symbols'>
+  <t>Brought old pagination text in alignment with requirements set out in draft-flanagan-plaintext</t>
+</list></t>
+
+<t>draft-flanagan-rfc-framework-06</t>
+<t><list style='symbols'>
+  <t>Minor wording cleanup; addition of pointer to discussion re: transition plans</t>
+</list></t>
+
+<t>draft-flanagan-rfc-framework-05</t>
+<t><list style='symbols'>
+  <t>Introduction: added text re: backwards compatibility</t>
+</list></t>
+
 
 <t>draft-flanagan-rfc-framework-04</t>
 <t><list style='simbols'>
@@ -337,6 +358,7 @@
 &I-D.hansen-rfc-use-of-pdf;
 &I-D.flanagan-plaintext;
 &I-D.flanagan-nonascii;
+&I-D.flanagan-rfc-css;
 
     </references>
 
